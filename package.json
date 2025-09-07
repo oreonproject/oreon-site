@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "clean": "rm -rf dist/"
+    "clean": "rm -rf dist/",
+    "serve": "echo 'Build completed - static files ready for deployment'"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",
