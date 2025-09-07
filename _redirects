@@ -1,0 +1,23 @@
+# Cloudflare Pages redirects file
+# Handle SPA routes and redirect common paths
+
+# Main routes
+/docs/* /docs/:splat 200
+/help/* /help/:splat 200
+/downloads/* /downloads/:splat 200
+/oreon-10/* /oreon-10/:splat 200
+/oreon-lime-r2/* /oreon-lime-r2/:splat 200
+/our-team/* /our-team/:splat 200
+/oreon-10-support-timeline/* /oreon-10-support-timeline/:splat 200
+/oreon-lime-r2-support-timeline/* /oreon-lime-r2-support-timeline/:splat 200
+
+# Handle trailing slashes
+/docs /docs/ 301
+/help /help/ 301
+/downloads /downloads/ 301
+/oreon-10 /oreon-10/ 301
+/oreon-lime-r2 /oreon-lime-r2/ 301
+/our-team /our-team/ 301
+
+# 404 fallback
+/* /404.html 404

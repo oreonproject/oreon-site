@@ -1,6 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./downloads/*.html", "./docs/*.html", "./help/*.html", "./our-team/*.html", "./oreon-10/*.html", "./oreon-lime-r2/*.html", "./oreon-10-support-timeline/*.html", "./oreon-lime-r2-support-timeline/*.html", "./privacy-policy.html", "./404.html"],
+  content: [
+    "./index.html", 
+    "./downloads/**/*.html", 
+    "./docs/**/*.html", 
+    "./help/**/*.html", 
+    "./our-team/**/*.html", 
+    "./oreon-10/**/*.html", 
+    "./oreon-lime-r2/**/*.html", 
+    "./oreon-10-support-timeline/**/*.html", 
+    "./oreon-lime-r2-support-timeline/**/*.html", 
+    "./privacy-policy.html", 
+    "./terms-of-service.html",
+    "./404.html"
+  ],
   theme: {
     extend: {
       fontFamily: {
