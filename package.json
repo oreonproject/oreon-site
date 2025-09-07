@@ -7,9 +7,7 @@
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "serve": "npx live-server --port=3000",
-    "clean": "rm -rf dist/",
-    "prebuild": "npm run clean",
-    "postbuild": "echo 'Build completed successfully'"
+    "clean": "rm -rf dist/"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",

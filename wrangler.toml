@@ -6,10 +6,3 @@ compatibility_date = "2024-01-01"
 command = "npm run build"
 cwd = ""
 watch_dir = "src"
-
-[build.upload]
-format = "service-worker"
-
-[[build.upload.rules]]
-type = "ESModule"
-globs = ["**/*.js"]
