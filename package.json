@@ -6,13 +6,11 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "serve": "npx live-server --port=3000",
     "clean": "rm -rf dist/"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",
-    "daisyui": "^4.7.2",
-    "live-server": "^1.2.2"
+    "daisyui": "^4.7.2"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.13"
