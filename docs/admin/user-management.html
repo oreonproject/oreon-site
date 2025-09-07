@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Admin</a></li>
+            <li>User Management</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="package-management.html">Package Management</a></li>
+                                    <li><a href="system-updates.html">System Updates</a></li>
+                                    <li><a href="user-management.html" class="active">User Management</a></li>
+                                    <li><a href="security.html">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../desktop/applications.html">Default Applications</a></li>
+                                    <li><a href="../desktop/software-center.html">Software Center</a></li>
+                                    <li><a href="../desktop/customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <h1 class="text-4xl font-bold gradient-text mb-6">
+                            <i class="fas fa-users mr-3 text-aurora-500"></i>
+                            User Management
+                        </h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                This guide covers the basics of managing user accounts and groups in Oreon.
+                            </p>
+
+                            <div class="alert alert-info mb-8">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Prerequisites</h3>
+                                    <p>These commands typically require superuser privileges. Use <code>sudo</code> before each command.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">User Management</h2>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Adding Users</h3>
+                            <p>To add a new user:</p>
+                            <div class="mockup-code mb-4">
+                                <pre><code>sudo useradd &lt;username&gt;</code></pre>
+                            </div>
+                            <p>This creates the user account but it's initially locked. You need to set a password:</p>
+                            <div class="mockup-code mb-4">
+                                <pre><code>sudo passwd &lt;username&gt;</code></pre>
+                            </div>
+                            <p>You will be prompted to enter and confirm the new password.</p>
+
+                            <div class="card bg-base-200 p-4 mb-6">
+                                <h4 class="font-semibold mb-3">Common options for <code>useradd</code>:</h4>
+                                <ul class="space-y-2">
+                                    <li><code class="badge badge-ghost">-m</code>: Create the user's home directory</li>
+                                    <li><code class="badge badge-ghost">-G &lt;group1&gt;,&lt;group2&gt;</code>: Add the user to supplementary groups</li>
+                                    <li><code class="badge badge-ghost">-s &lt;shell&gt;</code>: Specify the user's login shell (e.g., <code>/bin/bash</code>)</li>
+                                    <li><code class="badge badge-ghost">-c "&lt;Comment/Full Name&gt;"</code>: Add a descriptive comment</li>
+                                </ul>
+                            </div>
+
+                            <p>Example: Add user 'jane' to the 'developers' group with a comment:</p>
+                            <div class="mockup-code mb-6">
+                                <pre><code>sudo useradd -m -G developers -c "Jane Doe" jane
+sudo passwd jane</code></pre>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Modifying Users</h3>
+                            <p>To modify an existing user account, use <code class="badge badge-ghost">usermod</code>. Common options include:</p>
+                            
+                            <div class="overflow-x-auto mb-6">
+                                <table class="table table-zebra">
+                                    <thead>
+                                        <tr>
+                                            <th>Option</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>-l &lt;new_username&gt;</code></td>
+                                            <td>Change the username</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-g &lt;primary_group&gt;</code></td>
+                                            <td>Change the primary group</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-G &lt;group1&gt;,&lt;group2&gt;</code></td>
+                                            <td>Set the list of supplementary groups (overwrites existing list)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-aG &lt;group_to_add&gt;</code></td>
+                                            <td>Add the user to a supplementary group (appends to existing list)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-s &lt;shell&gt;</code></td>
+                                            <td>Change the login shell</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-L</code></td>
+                                            <td>Lock the user account</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-U</code></td>
+                                            <td>Unlock the user account</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>Example: Add user 'john' to the 'testers' group without removing existing groups:</p>
+                            <div class="mockup-code mb-6">
+                                <pre><code>sudo usermod -aG testers john</code></pre>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Deleting Users</h3>
+                            <p>To delete a user account:</p>
+                            <div class="mockup-code mb-4">
+                                <pre><code>sudo userdel &lt;username&gt;</code></pre>
+                            </div>
+                            <p>To also remove the user's home directory and mail spool:</p>
+                            <div class="mockup-code mb-6">
+                                <pre><code>sudo userdel -r &lt;username&gt;</code></pre>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Group Management</h2>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Adding Groups</h3>
+                            <p>To create a new group:</p>
+                            <div class="mockup-code mb-6">
+                                <pre><code>sudo groupadd &lt;groupname&gt;</code></pre>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Modifying Groups</h3>
+                            <p>To change a group's name:</p>
+                            <div class="mockup-code mb-6">
+                                <pre><code>sudo groupmod -n &lt;new_name&gt; &lt;old_name&gt;</code></pre>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Deleting Groups</h3>
+                            <p>To delete a group:</p>
+                            <div class="mockup-code mb-6">
+                                <pre><code>sudo groupdel &lt;groupname&gt;</code></pre>
+                            </div>
+
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <h3 class="font-bold">Important</h3>
+                                    <p>You cannot delete a group that is the primary group of any user. Change the user's primary group first or delete the user.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

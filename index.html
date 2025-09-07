@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreon Project - Where open source becomes something special</title>
+    <link rel="icon" href="public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-emerald-50/30 via-white to-teal-50/30" style="background-image: radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.07) 0%, transparent 50%), radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="/" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen bg-white relative overflow-hidden" style="background-image: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.07) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(20, 184, 166, 0.06) 0%, transparent 30%), radial-gradient(circle at 60% 10%, rgba(16, 185, 129, 0.05) 0%, transparent 40%), radial-gradient(circle at 10% 30%, rgba(20, 184, 166, 0.04) 0%, transparent 50%);">
+        <div class="hero-content text-center">
+            <div class="max-w-6xl">
+                <h1 class="text-5xl md:text-7xl font-semibold mb-8 mt-16">
+                    <span class="block">A distro that</span>
+                    <span class="font-bold gradient-text">actually rocks.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-base-content/70 mb-16 max-w-2xl mx-auto">
+                    Oreon Project is dedicated to making Enterprise Linux more suitable for desktops and laptops, providing the best user experience right out of the gate.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <a href="downloads/" class="btn btn-primary btn-lg">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Now
+                    </a>
+                    <a href="help/" class="btn btn-secondary btn-lg">
+                        Help & Support
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Large Image Showcase -->
+                <div class="mt-24">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="relative">
+                            <!-- Large image container -->
+                            <div class="relative mx-auto">
+                                <div class="bg-gradient-to-br from-emerald-50/30 to-teal-50/30 rounded-3xl p-8 shadow-2xl border border-gray-100/50" style="background-image: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 70%), radial-gradient(circle at 70% 70%, rgba(20, 184, 166, 0.04) 0%, transparent 70%);">
+                                    <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30">
+                                        <img src="public/images/oreon1.png" alt="Oreon Linux Desktop" 
+                                             class="w-full h-auto rounded-2xl shadow-lg">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-emerald-50/15" style="background-image: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 60%), radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.03) 0%, transparent 40%);">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Enterprise Linux but a little friendlier</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our primary goal is to make Enterprise Linux more suitable towards use on desktops and laptops. We focus on providing the best user experience right out of the gate.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-lg border border-gray-200 hover:shadow-xl">
+                    <div class="card-body items-center text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-face-smile text-6xl text-emerald-600"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4 text-gray-900">Friendly Defaults</h3>
+                        <p class="text-gray-600">
+                            Oreon ships with the GNOME desktop by default with a few tweaks and extra applications to fulfill the user's needs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg border border-gray-200 hover:shadow-xl">
+                    <div class="card-body items-center text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-arrows-rotate text-6xl text-teal-600"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4 text-gray-900">Continuous Updates</h3>
+                        <p class="text-gray-600">
+                            With the help of upstream and our team, we are able to promise several years of security fixes and new features to each Oreon release.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg border border-gray-200 hover:shadow-xl">
+                    <div class="card-body items-center text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-server text-6xl text-blue-600"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4 text-gray-900">Built on Enterprise Linux</h3>
+                        <p class="text-gray-600">
+                            Oreon is based on RHEL and compatible with all its packages. Take advantage of the stability and security of Enterprise Linux.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Versions Section -->
+    <section class="py-20 px-4 bg-gradient-to-tr from-white via-teal-50/8 to-blue-50/10" style="background-image: radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.03) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.025) 0%, transparent 50%), radial-gradient(circle at 60% 60%, rgba(59, 130, 246, 0.02) 0%, transparent 60%);">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Current Versions</h2>
+                <p class="text-xl text-gray-600">
+                    Oreon Linux is available in multiple versions to suit your needs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card glass-card hover:shadow-2xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-3xl font-bold text-aurora-600 mb-4">Oreon 10</h3>
+                        <p class="text-base-content/80 mb-6">
+                            Based on RHEL 10, this is our latest and most advanced release featuring the newest packages and technologies.
+                        </p>
+                        <div class="card-actions justify-end">
+                            <a href="oreon-10/" class="btn btn-secondary">Learn More</a>
+                            <a href="downloads/" class="btn btn-primary">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card hover:shadow-2xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-3xl font-bold text-aurora-600 mb-4">Oreon Lime (R2)</h3>
+                        <p class="text-base-content/80 mb-6">
+                            Based on RHEL 9, this stable release offers long-term support and proven reliability for your daily computing needs.
+                        </p>
+                        <div class="card-actions justify-end">
+                            <a href="oreon-lime-r2/" class="btn btn-secondary">Learn More</a>
+                            <a href="downloads/" class="btn btn-primary">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="py-20 px-4 bg-gradient-to-bl from-emerald-50/8 via-gray-50 to-blue-50/12" style="background-image: radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.02) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(16, 185, 129, 0.015) 0%, transparent 50%), radial-gradient(circle at 50% 90%, rgba(20, 184, 166, 0.01) 0%, transparent 40%);">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Join Our Community</h2>
+                <p class="text-xl text-gray-600">
+                    Oreon Project is driven by a passionate community of users and developers.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="https://discord.gg/2Yyacu58Ap" class="card glass-card hover:shadow-2xl">
+                    <div class="card-body items-center text-center">
+                        <img src="public/images/discord-icon.svg" alt="Discord" class="w-16 h-16 mb-4">
+                        <h3 class="card-title text-2xl font-bold">Discord</h3>
+                        <p class="text-base-content/80">Join our Discord server for real-time help and community discussions.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/oreonproject" class="card glass-card hover:shadow-2xl">
+                    <div class="card-body items-center text-center">
+                        <img src="public/images/github-icon.svg" alt="GitHub" class="w-16 h-16 mb-4">
+                        <h3 class="card-title text-2xl font-bold">GitHub</h3>
+                        <p class="text-base-content/80">View Oreon's projects and source code.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content">
+        <aside>
+            <img src="public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="downloads/" class="link link-hover">Download</a>
+            <a href="docs/" class="link link-hover">Documentation</a>
+            <a href="oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero py-16 px-4">
+        <div class="hero-content text-center">
+            <div class="max-w-6xl">
+                <h1 class="text-5xl md:text-6xl font-black mb-8">
+                    <span class="gradient-text">Installation Guide</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-base-content/70 mb-8">
+                    Step-by-step instructions for installing Oreon Linux
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Content -->
+    <section class="py-10 px-4">
+        <div class="container mx-auto max-w-full px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-24">
+                        <div class="card glass-card p-6">
+                            <div class="space-y-6">
+                                <!-- Getting Started -->
+                                <div>
+                                    <h3 class="text-lg font-bold text-aurora-600 mb-3 flex items-center">
+                                        <i class="fas fa-rocket mr-2"></i>
+                                        Getting Started
+                                    </h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="../index.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Documentation Overview</a></li>
+                                        <li><a href="installation.html" class="block py-2 px-3 rounded-lg bg-aurora-100 text-aurora-700 font-medium">Installation Guide</a></li>
+                                        <li><a href="post-install.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Post-Installation Setup</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- System Administration -->
+                                <div>
+                                    <h3 class="text-lg font-bold text-aurora-600 mb-3 flex items-center">
+                                        <i class="fas fa-cogs mr-2"></i>
+                                        System Administration
+                                    </h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="../admin/package-management.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Package Management</a></li>
+                                        <li><a href="../admin/system-updates.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">System Updates</a></li>
+                                        <li><a href="../admin/user-management.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">User Management</a></li>
+                                        <li><a href="../admin/security.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Security & Hardening</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Desktop Usage -->
+                                <div>
+                                    <h3 class="text-lg font-bold text-aurora-600 mb-3 flex items-center">
+                                        <i class="fas fa-desktop mr-2"></i>
+                                        Desktop Usage
+                                    </h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="../desktop/applications.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Default Applications</a></li>
+                                        <li><a href="../desktop/software-center.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Software Center</a></li>
+                                        <li><a href="../desktop/customization.html" class="block py-2 px-3 rounded-lg hover:bg-base-200">Desktop Customization</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <div class="prose prose-lg max-w-none">
+                        <p>This guide provides step-by-step instructions for installing Oreon Linux on your computer. We recommend reading through the entire guide before starting the installation process.</p>
+
+                        <h2 class="text-3xl font-bold mb-6 text-aurora-700">Before You Begin</h2>
+                        <ul>
+                            <li><strong>Download the ISO:</strong> Obtain the latest Oreon Linux ISO image from the <a href="../../downloads/">Downloads</a> page.</li>
+                            <li><strong>Verify the ISO (Recommended):</strong> Ensure the downloaded ISO file is not corrupted by verifying its checksum (SHA256 or similar). Checksum details are usually provided alongside the download link.</li>
+                            <li><strong>Create Bootable Media:</strong> Write the ISO image to a USB drive (recommended, 4GB minimum) or DVD. Tools like <a href="https://rufus.ie/" target="_blank">Rufus</a> (Windows), <a href="https://etcher.balena.io/" target="_blank">balenaEtcher</a> (Cross-platform), or the `dd` command (Linux/macOS) can be used.</li>
+                            <li><strong>System Requirements:</strong> Ensure your computer meets the minimum system requirements (check the specific release notes for details, but generally: 64-bit processor, 4GB RAM, 25GB disk space).</li>
+                            <li><strong>Backup Data:</strong> Back up any important data from the target computer before proceeding. The installation process may erase the hard drive.</li>
+                            <li><strong>Configure BIOS/UEFI:</strong> Access your system's BIOS/UEFI settings (usually by pressing F2, F12, DEL, or ESC during boot) and configure it to boot from the USB drive or DVD you created.</li>
+                        </ul>
+
+                        <h2 class="text-3xl font-bold mb-6 text-aurora-700">Booting the Installer</h2>
+                        <ol>
+                            <li>Insert the bootable USB drive or DVD into your computer.</li>
+                            <li>Restart the computer.</li>
+                            <li>If configured correctly, the Oreon Linux installer boot menu should appear. Select the option to "Test and run Oreon Linux" (or similar) and press Enter.</li>
+                            <li>The installer environment will load. This may take a few moments.</li>
+                        </ol>
+
+                        <h2 class="text-3xl font-bold mb-6 text-aurora-700">The Anaconda Installer</h2>
+                        <p>Oreon Linux uses the Anaconda installer, common in RHEL-based distributions. The main screen presents a summary of installation options.</p>
+                        <p>You need to complete items marked with a warning icon before proceeding. Click on each section to configure it:</p>
+                        
+                        <h3 class="text-2xl font-bold mb-4 text-aurora-600">1. Language Selection</h3>
+                        <p>Choose your preferred language for the installation process and the final installed system. Click "Continue".</p>
+
+                        <h3 class="text-2xl font-bold mb-4 text-aurora-600">2. Keyboard Layout</h3>
+                        <p>Verify or change the keyboard layout to match your hardware. You can test the layout in the provided text box. Click "Done".</p>
+
+                        <h3 class="text-2xl font-bold mb-4 text-aurora-600">3. Time & Date</h3>
+                        <p>Select your geographical region and city to set the correct timezone. Ensure "Network Time" is enabled if you have an internet connection for automatic time synchronization. Click "Done".</p>
+
+                        <h3 class="text-2xl font-bold mb-4 text-aurora-600">4. Installation Destination</h3>
+                        <p>This is the most critical step where you configure disk partitioning.</p>
+                        <ul>
+                            <li>Select the target hard drive(s) where you want to install Oreon Linux.</li>
+                            <li>Under "Storage Configuration", choose either:
+                                <ul>
+                                    <li><strong>Automatic:</strong> Recommended for most users. The installer will attempt to automatically partition the selected disk(s). You can choose to reclaim space if necessary.</li>
+                                    <li><strong>Custom:</strong> For advanced users who want to define partitions manually (e.g., separate /home, LVM, specific filesystems).</li>
+                                </ul>
+                            </li>
+                            <li>If you choose Automatic partitioning, you can review the proposed layout. Ensure it doesn't conflict with other operating systems if you are dual-booting.</li>
+                            <li>Click "Done". If you made changes that require formatting, Anaconda will ask for confirmation.</li>
+                        </ul>
+
+                        <h2 class="text-3xl font-bold mb-6 text-aurora-700">Finishing Up</h2>
+                        <ol>
+                            <li>When the installation is complete, click the finish button.</li>
+                            <li>Reboot your computer and remove the installation media (USB drive or DVD) after the reboot is complete.</li>
+                            <li>Your computer will restart and boot into your new Oreon Linux system.</li>
+                            <li>Log in using the user account you created during installation.</li>
+                        </ol>
+                        <p>Congratulations! You have successfully installed Oreon Linux. Proceed to the <a href="post-install.html">Post-Installation Setup</a> guide for initial configuration and updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4 h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../../docs/" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://forums.oreonproject.org" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

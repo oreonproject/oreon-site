@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102245" />
+      <stop offset="50%" stop-color="#192355" />
+      <stop offset="100%" stop-color="#132C50" />
+    </linearGradient>
+
+    <!-- Noise filter -->
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
+      <feBlend in="SourceGraphic" />
+    </filter>
+    
+    <!-- Glow filters -->
+    <filter id="blue-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="50" />
+    </filter>
+    
+    <filter id="green-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="50" />
+    </filter>
+    
+    <filter id="teal-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+  
+  <!-- Noise overlay -->
+  <rect width="1920" height="1080" filter="url(#noise)" opacity="0.3" />
+  
+  <!-- Glow shapes -->
+  <circle cx="400" cy="300" r="350" fill="#4466FF" opacity="0.08" filter="url(#blue-glow)" />
+  <circle cx="1600" cy="400" r="380" fill="#22D3AA" opacity="0.08" filter="url(#green-glow)" />
+  <circle cx="950" cy="850" r="450" fill="#22A0D3" opacity="0.07" filter="url(#teal-glow)" />
+  <circle cx="1200" cy="250" r="280" fill="#3975D9" opacity="0.06" filter="url(#blue-glow)" />
+  
+  <!-- Grid pattern -->
+  <g opacity="0.04">
+    <!-- Horizontal lines -->
+    <path d="M0 40 L1920 40" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 80 L1920 80" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 120 L1920 120" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 160 L1920 160" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 200 L1920 200" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 240 L1920 240" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 280 L1920 280" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 320 L1920 320" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 360 L1920 360" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 400 L1920 400" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 440 L1920 440" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 480 L1920 480" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 520 L1920 520" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 560 L1920 560" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 600 L1920 600" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 640 L1920 640" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 680 L1920 680" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 720 L1920 720" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 760 L1920 760" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 800 L1920 800" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 840 L1920 840" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 880 L1920 880" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 920 L1920 920" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 960 L1920 960" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 1000 L1920 1000" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 1040 L1920 1040" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M0 1080 L1920 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    
+    <!-- Vertical lines -->
+    <path d="M40 0 L40 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M80 0 L80 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M120 0 L120 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M160 0 L160 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M200 0 L200 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M240 0 L240 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M280 0 L280 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M320 0 L320 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M360 0 L360 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M400 0 L400 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M440 0 L440 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M480 0 L480 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M520 0 L520 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M560 0 L560 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M600 0 L600 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M640 0 L640 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M680 0 L680 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M720 0 L720 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M760 0 L760 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M800 0 L800 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M840 0 L840 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M880 0 L880 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M920 0 L920 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M960 0 L960 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1000 0 L1000 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1040 0 L1040 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1080 0 L1080 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1120 0 L1120 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1160 0 L1160 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1200 0 L1200 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1240 0 L1240 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1280 0 L1280 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1320 0 L1320 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1360 0 L1360 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1400 0 L1400 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1440 0 L1440 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1480 0 L1480 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1520 0 L1520 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1560 0 L1560 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1600 0 L1600 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1640 0 L1640 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1680 0 L1680 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1720 0 L1720 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1760 0 L1760 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1800 0 L1800 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1840 0 L1840 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1880 0 L1880 1080" stroke="#8BE9DC" stroke-width="0.5" />
+    <path d="M1920 0 L1920 1080" stroke="#8BE9DC" stroke-width="0.5" />
+  </g>
+  
+  <!-- Subtle gradient overlay -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)" opacity="0.2" />
+</svg> 

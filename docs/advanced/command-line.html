@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Line - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Advanced</a></li>
+            <li>Command Line</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../admin/package-management.html">Package Management</a></li>
+                                    <li><a href="../admin/system-updates.html">System Updates</a></li>
+                                    <li><a href="../admin/user-management.html">User Management</a></li>
+                                    <li><a href="../admin/security.html">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../desktop/applications.html">Default Applications</a></li>
+                                    <li><a href="../desktop/software-center.html">Software Center</a></li>
+                                    <li><a href="../desktop/customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Advanced Topics</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="command-line.html" class="active">Command Line</a></li>
+                                    <li><a href="virtualization.html">Virtualization</a></li>
+                                    <li><a href="development.html">Development Environment</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Troubleshooting</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                                    <li><a href="../troubleshooting/system-logs.html">System Logs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <h1 class="text-4xl font-bold gradient-text mb-6">
+                            <i class="fas fa-terminal mr-3 text-aurora-500"></i>
+                            Command Line
+                        </h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                Master the powerful Linux command line interface to unlock advanced system administration and automation capabilities.
+                            </p>
+
+                            <div class="alert alert-info mb-8">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Terminal Access</h3>
+                                    <p>Open the terminal using Ctrl+Alt+T, searching for "Terminal" in activities, or clicking the terminal icon in the dock.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Essential Commands</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">File Operations</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># List files and directories
+ls -la
+
+# Change directory
+cd /path/to/directory
+
+# Copy files
+cp source destination
+
+# Move/rename files
+mv oldname newname
+
+# Remove files
+rm filename
+
+# Create directory
+mkdir dirname</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">System Information</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># System uptime
+uptime
+
+# Disk usage
+df -h
+
+# Memory usage
+free -h
+
+# Running processes
+ps aux
+
+# System monitor
+top</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Text Processing</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># View file contents
+cat filename
+
+# Page through file
+less filename
+
+# Search in files
+grep "pattern" filename
+
+# Edit files
+nano filename
+
+# Word count
+wc filename</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Network & System</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Network configuration
+ip addr show
+
+# Check connectivity
+ping hostname
+
+# Download files
+wget URL
+
+# Archive files
+tar -czf archive.tar.gz files/
+
+# System services
+systemctl status servicename</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">File Permissions</h2>
+                            <p>Understanding and managing file permissions is crucial for system security and functionality.</p>
+
+                            <div class="overflow-x-auto mb-6">
+                                <table class="table table-zebra">
+                                    <thead>
+                                        <tr>
+                                            <th>Permission</th>
+                                            <th>Numeric</th>
+                                            <th>Symbolic</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Read</td>
+                                            <td>4</td>
+                                            <td>r</td>
+                                            <td>View file contents or list directory</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Write</td>
+                                            <td>2</td>
+                                            <td>w</td>
+                                            <td>Modify file or directory contents</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Execute</td>
+                                            <td>1</td>
+                                            <td>x</td>
+                                            <td>Run file or access directory</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Common Permission Examples</h4>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code># Make file executable
+chmod +x script.sh
+
+# Set permissions numerically
+chmod 755 filename  # rwxr-xr-x
+chmod 644 filename  # rw-r--r--
+
+# Change ownership
+chown user:group filename
+
+# Recursive permissions
+chmod -R 755 directory/</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Permission Breakdown</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li><code>755</code>: Owner (rwx), Group (r-x), Others (r-x)</li>
+                                        <li><code>644</code>: Owner (rw-), Group (r--), Others (r--)</li>
+                                        <li><code>600</code>: Owner (rw-), Group (---), Others (---)</li>
+                                        <li><code>777</code>: Everyone (rwx) - Use with caution!</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Advanced Features</h2>
+
+                            <div class="tabs tabs-boxed mb-6">
+                                <input type="radio" name="advanced_tabs" role="tab" class="tab" aria-label="Pipes & Redirection" checked />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Pipes and Redirection</h3>
+                                    <p class="mb-3">Combine commands and control output:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># Pipe output to another command
+ls -la | grep ".txt"
+
+# Redirect output to file
+ls -la > filelist.txt
+
+# Append to file
+echo "new line" >> file.txt
+
+# Redirect errors
+command 2> error.log
+
+# Redirect both output and errors
+command > output.log 2>&1</code></pre>
+                                    </div>
+                                </div>
+
+                                <input type="radio" name="advanced_tabs" role="tab" class="tab" aria-label="Job Control" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Job Control</h3>
+                                    <p class="mb-3">Manage running processes:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># Run in background
+command &
+
+# List background jobs
+jobs
+
+# Bring job to foreground
+fg %1
+
+# Send job to background
+bg %1
+
+# Stop current job
+Ctrl+Z
+
+# Kill current job
+Ctrl+C</code></pre>
+                                    </div>
+                                </div>
+
+                                <input type="radio" name="advanced_tabs" role="tab" class="tab" aria-label="Environment" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Environment Variables</h3>
+                                    <p class="mb-3">Manage shell environment:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># View all variables
+env
+
+# Set variable
+export VARNAME=value
+
+# View specific variable
+echo $VARNAME
+
+# Add to PATH
+export PATH=$PATH:/new/directory
+
+# Make permanent (add to ~/.bashrc)
+echo 'export VARNAME=value' >> ~/.bashrc</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Command History and Shortcuts</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">History Commands</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li><code>history</code> - Show command history</li>
+                                        <li><code>!!</code> - Repeat last command</li>
+                                        <li><code>!n</code> - Repeat command number n</li>
+                                        <li><code>!string</code> - Repeat last command starting with string</li>
+                                        <li><code>Ctrl+R</code> - Search command history</li>
+                                    </ul>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Keyboard Shortcuts</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li><code>Ctrl+C</code> - Kill current process</li>
+                                        <li><code>Ctrl+Z</code> - Suspend current process</li>
+                                        <li><code>Ctrl+A</code> - Move to beginning of line</li>
+                                        <li><code>Ctrl+E</code> - Move to end of line</li>
+                                        <li><code>Ctrl+U</code> - Clear line before cursor</li>
+                                        <li><code>Tab</code> - Auto-complete commands/files</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Scripting Basics</h2>
+                            <p>Create shell scripts to automate repetitive tasks:</p>
+
+                            <div class="card bg-base-200 p-4 mb-6">
+                                <h4 class="font-semibold mb-3">Simple Script Example</h4>
+                                <div class="mockup-code">
+                                    <pre><code>#!/bin/bash
+# Simple backup script
+
+DATE=$(date +%Y%m%d)
+BACKUP_DIR="/backup"
+SOURCE_DIR="/home/user/documents"
+
+echo "Starting backup on $DATE"
+tar -czf "$BACKUP_DIR/backup_$DATE.tar.gz" "$SOURCE_DIR"
+echo "Backup completed successfully!"</code></pre>
+                                </div>
+                                <p class="text-sm mt-2">Save as <code>backup.sh</code>, make executable with <code>chmod +x backup.sh</code>, then run with <code>./backup.sh</code></p>
+                            </div>
+
+                            <div class="alert alert-success">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h3 class="font-bold">Pro Tips</h3>
+                                    <ul class="mt-2">
+                                        <li>• Use <code>man command</code> to read manual pages for any command</li>
+                                        <li>• Press Tab twice to see all available completions</li>
+                                        <li>• Use <code>which command</code> to find where a command is located</li>
+                                        <li>• Chain commands with <code>&&</code> (run if previous succeeds) or <code>||</code> (run if previous fails)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

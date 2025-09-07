@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Logs - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Troubleshooting</a></li>
+            <li>System Logs</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../admin/package-management.html">Package Management</a></li>
+                                    <li><a href="../admin/system-updates.html">System Updates</a></li>
+                                    <li><a href="../admin/user-management.html">User Management</a></li>
+                                    <li><a href="../admin/security.html">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../desktop/applications.html">Default Applications</a></li>
+                                    <li><a href="../desktop/software-center.html">Software Center</a></li>
+                                    <li><a href="../desktop/customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Advanced Topics</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../advanced/command-line.html">Command Line</a></li>
+                                    <li><a href="../advanced/virtualization.html">Virtualization</a></li>
+                                    <li><a href="../advanced/development.html">Development Environment</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Troubleshooting</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="common-issues.html">Common Issues</a></li>
+                                    <li><a href="system-logs.html" class="active">System Logs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <h1 class="text-4xl font-bold gradient-text mb-6">
+                            <i class="fas fa-file-alt mr-3 text-aurora-500"></i>
+                            System Logs
+                        </h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                Learn how to read and analyze system logs to diagnose and troubleshoot issues in Oreon Linux.
+                            </p>
+
+                            <div class="alert alert-info mb-8">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">SystemD Journal</h3>
+                                    <p>Oreon uses systemd's journald for centralized logging. The <code>journalctl</code> command is your primary tool for accessing logs.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Essential Log Commands</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Basic Journal Commands</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># View all logs
+journalctl
+
+# Follow logs in real-time
+journalctl -f
+
+# Show only today's logs
+journalctl --since today
+
+# Show logs from last boot
+journalctl -b
+
+# Show last 50 lines
+journalctl -n 50</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Service-Specific Logs</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Logs for specific service
+journalctl -u NetworkManager
+
+# Follow service logs
+journalctl -fu sshd
+
+# Show service errors only
+journalctl -u httpd --priority=err
+
+# Since specific time
+journalctl --since "2024-01-01"</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Kernel Messages</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Current boot kernel messages
+dmesg
+
+# Follow kernel messages
+dmesg -w
+
+# Filter by facility
+dmesg --facility=daemon
+
+# Human readable timestamps
+dmesg -T</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Log Priorities</h3>
+                                    <div class="space-y-1 text-sm">
+                                        <div><code>emerg</code> - System unusable</div>
+                                        <div><code>alert</code> - Action must be taken</div>
+                                        <div><code>crit</code> - Critical conditions</div>
+                                        <div><code>err</code> - Error conditions</div>
+                                        <div><code>warning</code> - Warning conditions</div>
+                                        <div><code>notice</code> - Normal significant condition</div>
+                                        <div><code>info</code> - Informational messages</div>
+                                        <div><code>debug</code> - Debug-level messages</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Common Log Locations</h2>
+                            
+                            <div class="overflow-x-auto mb-6">
+                                <table class="table table-zebra">
+                                    <thead>
+                                        <tr>
+                                            <th>Log File</th>
+                                            <th>Content</th>
+                                            <th>Command</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>/var/log/messages</code></td>
+                                            <td>General system messages</td>
+                                            <td><code>tail -f /var/log/messages</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/var/log/secure</code></td>
+                                            <td>Authentication and security</td>
+                                            <td><code>grep "Failed" /var/log/secure</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/var/log/dnf.log</code></td>
+                                            <td>Package manager activity</td>
+                                            <td><code>tail /var/log/dnf.log</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/var/log/audit/audit.log</code></td>
+                                            <td>SELinux and audit events</td>
+                                            <td><code>ausearch -m avc</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/var/log/boot.log</code></td>
+                                            <td>Boot process messages</td>
+                                            <td><code>less /var/log/boot.log</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Troubleshooting Scenarios</h2>
+
+                            <div class="tabs tabs-boxed mb-6">
+                                <input type="radio" name="scenario_tabs" role="tab" class="tab" aria-label="Boot Issues" checked />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Diagnosing Boot Problems</h3>
+                                    <p class="mb-3">When your system fails to boot or boots slowly:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># Check boot logs from previous boot
+journalctl -b -1
+
+# Look for boot failures
+journalctl --priority=err -b
+
+# Check systemd services that failed
+systemctl --failed
+
+# Analyze boot time
+systemd-analyze blame</code></pre>
+                                    </div>
+                                </div>
+
+                                <input type="radio" name="scenario_tabs" role="tab" class="tab" aria-label="Service Problems" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Service Not Starting</h3>
+                                    <p class="mb-3">When a service fails to start or keeps crashing:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># Check service status
+systemctl status servicename
+
+# View service logs
+journalctl -u servicename
+
+# See recent failures
+journalctl -u servicename --since "1 hour ago"
+
+# Follow logs while restarting
+journalctl -fu servicename &
+systemctl restart servicename</code></pre>
+                                    </div>
+                                </div>
+
+                                <input type="radio" name="scenario_tabs" role="tab" class="tab" aria-label="Hardware Issues" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Hardware Problems</h3>
+                                    <p class="mb-3">For hardware detection and driver issues:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># Check for hardware errors
+dmesg | grep -i error
+
+# Look for firmware issues
+dmesg | grep -i firmware
+
+# Check USB device detection
+journalctl -k | grep -i usb
+
+# Monitor hardware events
+udevadm monitor</code></pre>
+                                    </div>
+                                </div>
+
+                                <input type="radio" name="scenario_tabs" role="tab" class="tab" aria-label="Network Issues" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-3">Network Connectivity</h3>
+                                    <p class="mb-3">Troubleshooting network problems:</p>
+                                    <div class="mockup-code">
+                                        <pre><code># NetworkManager logs
+journalctl -u NetworkManager
+
+# Check DHCP issues
+journalctl | grep -i dhcp
+
+# View firewall logs
+journalctl -u firewalld
+
+# Check for connection attempts
+grep "wlan0" /var/log/messages</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Advanced Log Analysis</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Filtering and Searching</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Search for specific text
+journalctl | grep "error"
+
+# Filter by time range
+journalctl --since "2024-01-01 12:00:00" \
+           --until "2024-01-01 13:00:00"
+
+# Filter by user
+journalctl _UID=1000
+
+# Multiple service logs
+journalctl -u service1 -u service2</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Log Export and Storage</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Export logs to file
+journalctl > system-logs.txt
+
+# Export specific timeframe
+journalctl --since today > today-logs.txt
+
+# Check journal size
+journalctl --disk-usage
+
+# Clean old logs
+sudo journalctl --vacuum-time=1month</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Log Monitoring Tools</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <div class="card bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-eye text-2xl text-blue-600 mb-2"></i>
+                                        <h3 class="font-bold text-blue-600">journalctl</h3>
+                                        <p class="text-sm">Built-in systemd journal viewer</p>
+                                        <code class="text-xs">journalctl -f</code>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-gradient-to-br from-green-50 to-green-100 border border-green-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-terminal text-2xl text-green-600 mb-2"></i>
+                                        <h3 class="font-bold text-green-600">tail</h3>
+                                        <p class="text-sm">Monitor file changes in real-time</p>
+                                        <code class="text-xs">tail -f /var/log/messages</code>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-search text-2xl text-purple-600 mb-2"></i>
+                                        <h3 class="font-bold text-purple-600">ausearch</h3>
+                                        <p class="text-sm">Search audit logs for security events</p>
+                                        <code class="text-xs">ausearch -m avc</code>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Log Rotation and Maintenance</h2>
+                            
+                            <div class="alert alert-warning mb-4">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <h3 class="font-bold">Storage Management</h3>
+                                    <p>Logs can consume significant disk space. Regular maintenance is important for system health.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Journal Configuration</h4>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Edit journal config
+sudo nano /etc/systemd/journald.conf
+
+# Key settings:
+SystemMaxUse=1G
+MaxFileSec=1month
+MaxRetentionSec=1year
+
+# Restart journald
+sudo systemctl restart systemd-journald</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Manual Cleanup</h4>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Remove logs older than 1 week
+sudo journalctl --vacuum-time=1week
+
+# Keep only 500MB of logs
+sudo journalctl --vacuum-size=500M
+
+# Remove old rotated files
+sudo find /var/log -name "*.old" -delete</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h3 class="font-bold">Pro Tips</h3>
+                                    <ul class="mt-2">
+                                        <li>• Use <code>journalctl -p err</code> to quickly find error messages</li>
+                                        <li>• Combine multiple filters: <code>journalctl -u sshd --since yesterday</code></li>
+                                        <li>• Use <code>--no-pager</code> to prevent output from being piped through a pager</li>
+                                        <li>• Save frequently used commands as shell aliases</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

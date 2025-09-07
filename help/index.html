@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Oreon Project</title>
+    <link rel="icon" href="../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-oreon-50 via-white to-oreon-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero py-16 px-4">
+        <div class="hero-content text-center">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-6xl font-black mb-8">
+                    Help & <span class="gradient-text">Support</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-base-content/70 mb-8">
+                    Find resources to help you use Oreon Linux effectively
+                </p>
+                <p class="text-lg text-base-content/60">
+                    From comprehensive documentation to community forums, we have everything you need to get the most out of your Oreon Linux experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Resources -->
+    <section class="py-10 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Documentation -->
+                <div class="card glass-card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body items-center text-center">
+                        <div class="text-6xl text-oreon-500 mb-6">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4">Documentation</h3>
+                        <p class="text-base-content/70 mb-6">
+                            Comprehensive guides and documentation for Oreon Linux covering installation, configuration, package management, and troubleshooting.
+                        </p>
+                        <div class="card-actions">
+                            <a href="../docs/" class="btn btn-primary btn-lg">
+                                <i class="fas fa-book-open mr-2"></i>
+                                View Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forums -->
+                <div class="card glass-card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body items-center text-center">
+                        <div class="text-6xl text-oreon-500 mb-6">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4">Oreon Forums</h3>
+                        <p class="text-base-content/70 mb-6">
+                            Ask questions, share solutions, and connect with the Oreon community. Our forums are the best place to get support and discuss Oreon Linux.
+                        </p>
+                        <div class="card-actions">
+                            <a href="https://forums.oreonproject.org/" class="btn btn-primary btn-lg" target="_blank">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Go to Forums
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wiki -->
+                <div class="card glass-card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body items-center text-center">
+                        <div class="text-6xl text-oreon-500 mb-6">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4">Oreon Wiki</h3>
+                        <p class="text-base-content/70 mb-6">
+                            A community-maintained wiki with guides and useful information. Users can also contribute to the wiki if they would like.
+                        </p>
+                        <div class="card-actions">
+                            <a href="https://wiki.oreonproject.org/" class="btn btn-primary btn-lg" target="_blank">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Go to Wiki
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord -->
+                <div class="card glass-card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="card-body items-center text-center">
+                        <div class="text-6xl text-blue-500 mb-6">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="card-title text-2xl font-bold mb-4">Discord Server</h3>
+                        <p class="text-base-content/70 mb-6">
+                            Join our Discord for real-time chat and community discussions. Great for live interaction while forums are preferred for support.
+                        </p>
+                        <div class="card-actions">
+                            <a href="https://discord.gg/2Yyacu58Ap" class="btn btn-primary btn-lg" target="_blank">
+                                <i class="fab fa-discord mr-2"></i>
+                                Join Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 bg-base-200/50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-base-content/70">Common questions and answers about Oreon Linux</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="collapse collapse-plus glass-card">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-xl font-medium">
+                        <i class="fas fa-question-circle text-oreon-500 mr-3"></i>
+                        What are the system requirements for Oreon Linux?
+                    </div>
+                    <div class="collapse-content">
+                        <p class="text-base-content/80">
+                            Oreon Linux requires a 64-bit processor, 2GB RAM (4GB recommended), 20GB disk space, and a graphics card compatible with GNOME.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus glass-card">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-xl font-medium">
+                        <i class="fas fa-calendar text-oreon-500 mr-3"></i>
+                        How long is each Oreon version supported?
+                    </div>
+                    <div class="collapse-content">
+                        <p class="text-base-content/80">
+                            Oreon follows the support timeline of its base RHEL version, with security updates provided throughout the entire support period. See each version's support timeline for specific dates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus glass-card">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-xl font-medium">
+                        <i class="fas fa-arrow-up text-oreon-500 mr-3"></i>
+                        Can I upgrade from one Oreon version to another?
+                    </div>
+                    <div class="collapse-content">
+                        <p class="text-base-content/80">
+                            We are working on this, but it is not yet available.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus glass-card">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-xl font-medium">
+                        <i class="fas fa-dollar-sign text-oreon-500 mr-3"></i>
+                        Is Oreon Linux free to use?
+                    </div>
+                    <div class="collapse-content">
+                        <p class="text-base-content/80">
+                            Yes, Oreon Linux is free to use for both personal and commercial purposes, in accordance with the licenses of included software.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus glass-card">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-xl font-medium">
+                        <i class="fas fa-hands-helping text-oreon-500 mr-3"></i>
+                        How can I contribute to the Oreon Project?
+                    </div>
+                    <div class="collapse-content">
+                        <p class="text-base-content/80">
+                            You can contribute by testing, reporting bugs, helping with documentation, or developing. Join our Discord community to learn more about contribution opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Need Help Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-6">Still Need Help?</h2>
+            <p class="text-xl text-base-content/70 mb-8">
+                If you couldn't find what you're looking for, you can reach out to us directly through our community support channels.
+            </p>
+
+            <div class="card glass-card max-w-md mx-auto">
+                <div class="card-body items-center text-center">
+                    <div class="text-5xl text-oreon-500 mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="card-title text-2xl font-bold mb-4">Community Support</h3>
+                    <p class="text-base-content/70 mb-6">
+                        Visit our Oreon Forums for community support and discussions. Our community is always ready to help!
+                    </p>
+                    <a href="https://forums.oreonproject.org/" class="btn btn-primary btn-lg" target="_blank">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Go to Forums
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4 h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../downloads/" class="link link-hover">Download</a>
+            <a href="../docs/" class="link link-hover">Documentation</a>
+            <a href="../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://forums.oreonproject.org" class="link link-hover">Discord</a>
+            <a href="../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

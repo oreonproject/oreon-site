@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreon 10 Release Notes - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Releases</a></li>
+            <li>Oreon 10</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../admin/package-management.html">Package Management</a></li>
+                                    <li><a href="../admin/system-updates.html">System Updates</a></li>
+                                    <li><a href="../admin/user-management.html">User Management</a></li>
+                                    <li><a href="../admin/security.html">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../desktop/applications.html">Default Applications</a></li>
+                                    <li><a href="../desktop/software-center.html">Software Center</a></li>
+                                    <li><a href="../desktop/customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Advanced Topics</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../advanced/command-line.html">Command Line</a></li>
+                                    <li><a href="../advanced/virtualization.html">Virtualization</a></li>
+                                    <li><a href="../advanced/development.html">Development Environment</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Troubleshooting</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                                    <li><a href="../troubleshooting/system-logs.html">System Logs</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Release Notes</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="oreon-10.html" class="active">Oreon 10 'Foxy'</a></li>
+                                    <li><a href="oreon-lime-r2.html">Oreon Lime R2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <div class="flex items-center mb-6">
+                            <img src="../../public/images/oreon10.png" alt="Oreon 10" class="h-16 w-16 mr-4">
+                            <div>
+                                <h1 class="text-4xl font-bold gradient-text">
+                                    Oreon 10 'Foxy'
+                                </h1>
+                                <p class="text-lg text-base-content/70">Released December 12, 2024</p>
+                            </div>
+                        </div>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                Oreon 10 'Foxy' represents our latest and most advanced release, built on Red Hat Enterprise Linux 10 with cutting-edge features and enhanced user experience.
+                            </p>
+
+                            <!-- Quick Stats -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                                <div class="stat bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg">
+                                    <div class="stat-title text-blue-600">Base System</div>
+                                    <div class="stat-value text-2xl text-blue-700">RHEL 10</div>
+                                    <div class="stat-desc text-blue-600">Latest Enterprise Linux</div>
+                                </div>
+                                <div class="stat bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-lg">
+                                    <div class="stat-title text-green-600">Kernel Version</div>
+                                    <div class="stat-value text-2xl text-green-700">6.12</div>
+                                    <div class="stat-desc text-green-600">Latest stable kernel</div>
+                                </div>
+                                <div class="stat bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg">
+                                    <div class="stat-title text-purple-600">Desktop</div>
+                                    <div class="stat-value text-2xl text-purple-700">GNOME 47</div>
+                                    <div class="stat-desc text-purple-600">Modern interface</div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mb-8">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <h3 class="font-bold">Support Timeline</h3>
+                                    <ul class="mt-2">
+                                        <li>• <strong>Mainstream Support:</strong> Until August 20, 2030</li>
+                                        <li>• <strong>End of Support:</strong> June 1, 2035</li>
+                                        <li>• <strong>Security Updates:</strong> Throughout support period</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">What's New in Oreon 10</h2>
+
+                            <div class="tabs tabs-boxed mb-6">
+                                <input type="radio" name="features_tabs" role="tab" class="tab" aria-label="Desktop Features" checked />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-4">Enhanced Desktop Experience</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-desktop text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>GNOME 47:</strong> Latest desktop environment with improved performance and new features
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-paint-brush text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Refined Theme:</strong> Updated Oreon visual theme with better accessibility
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-window-restore text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Window Management:</strong> Enhanced window tiling and workspace management
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-search text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Search Improvements:</strong> Faster application and file search capabilities
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <input type="radio" name="features_tabs" role="tab" class="tab" aria-label="System Features" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-4">System Improvements</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-shield-alt text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Enhanced Security:</strong> Latest SELinux policies and security frameworks
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-microchip text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Hardware Support:</strong> Improved support for modern CPUs and GPUs
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-rocket text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Performance:</strong> Optimized boot times and system responsiveness
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-battery-full text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Power Management:</strong> Better battery life for laptops and mobile devices
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <input type="radio" name="features_tabs" role="tab" class="tab" aria-label="Developer Tools" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <h3 class="font-semibold mb-4">Development Environment</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-code text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Modern Toolchain:</strong> Latest GCC, Python, Node.js, and development tools
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fab fa-docker text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Container Support:</strong> Podman 5.0 with improved Kubernetes integration
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-cube text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Flatpak Integration:</strong> Enhanced application sandboxing and distribution
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-terminal text-aurora-500 mr-2 mt-1"></i>
+                                            <div>
+                                                <strong>Terminal Improvements:</strong> Enhanced shell features and command-line tools
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">System Requirements</h2>
+                            
+                            <div class="overflow-x-auto mb-6">
+                                <table class="table table-zebra">
+                                    <thead>
+                                        <tr>
+                                            <th>Component</th>
+                                            <th>Minimum</th>
+                                            <th>Recommended</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>CPU</strong></td>
+                                            <td>2 cores, 64-bit</td>
+                                            <td>4+ cores, modern CPU</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Memory</strong></td>
+                                            <td>4 GB RAM</td>
+                                            <td>8+ GB RAM</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Storage</strong></td>
+                                            <td>20 GB free space</td>
+                                            <td>50+ GB SSD</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Graphics</strong></td>
+                                            <td>1024x768 display</td>
+                                            <td>1920x1080+ with hardware acceleration</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Network</strong></td>
+                                            <td>Internet connection for updates</td>
+                                            <td>Broadband for optimal experience</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Known Issues & Workarounds</h2>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <div>
+                                        <h3 class="font-bold">Graphics Driver Compatibility</h3>
+                                        <p>Some older NVIDIA graphics cards may require manual driver installation. See our <a href="../troubleshooting/common-issues.html" class="link link-primary">troubleshooting guide</a> for assistance.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    <div>
+                                        <h3 class="font-bold">Wayland Display Server</h3>
+                                        <p>Oreon 10 uses Wayland by default. If you experience issues with certain applications, you can switch to X11 from the login screen.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Upgrade Information</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">From Oreon Lime R2</h3>
+                                    <p class="text-sm mb-3">Direct upgrade path available using system update tools.</p>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code># Backup your data first
+sudo dnf system-upgrade download --releasever=10
+sudo dnf system-upgrade reboot</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Fresh Installation</h3>
+                                    <p class="text-sm mb-3">Recommended for best performance and stability.</p>
+                                    <ul class="text-sm space-y-1">
+                                        <li>• Download latest ISO from downloads page</li>
+                                        <li>• Create bootable USB with recommended tools</li>
+                                        <li>• Follow installation guide</li>
+                                        <li>• Restore data from backups</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Package Versions</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Core System</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li>Kernel: 6.12.x</li>
+                                        <li>Systemd: 256</li>
+                                        <li>Glibc: 2.40</li>
+                                        <li>Mesa: 24.2</li>
+                                    </ul>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Desktop Environment</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li>GNOME: 47.x</li>
+                                        <li>GTK: 4.16</li>
+                                        <li>Wayland: 1.23</li>
+                                        <li>PipeWire: 1.2</li>
+                                    </ul>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Development Tools</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li>GCC: 14.x</li>
+                                        <li>Python: 3.12</li>
+                                        <li>Node.js: 22.x</li>
+                                        <li>Podman: 5.0</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success">
+                                <i class="fas fa-download"></i>
+                                <div>
+                                    <h3 class="font-bold">Ready to Download?</h3>
+                                    <p>Get Oreon 10 'Foxy' from our <a href="../../downloads/" class="link link-primary">downloads page</a> and start experiencing the latest in Linux desktop computing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

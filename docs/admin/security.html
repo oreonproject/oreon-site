@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Hardening - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Admin</a></li>
+            <li>Security & Hardening</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="package-management.html">Package Management</a></li>
+                                    <li><a href="system-updates.html">System Updates</a></li>
+                                    <li><a href="user-management.html">User Management</a></li>
+                                    <li><a href="security.html" class="active">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../desktop/applications.html">Default Applications</a></li>
+                                    <li><a href="../desktop/software-center.html">Software Center</a></li>
+                                    <li><a href="../desktop/customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <h1 class="text-4xl font-bold gradient-text mb-6">
+                            <i class="fas fa-shield-alt mr-3 text-aurora-500"></i>
+                            Security & Hardening
+                        </h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                Oreon Linux comes with robust security features enabled by default. This guide covers essential security practices and hardening techniques.
+                            </p>
+
+                            <div class="alert alert-warning mb-8">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <h3 class="font-bold">Security First</h3>
+                                    <p>Security is a continuous process. Regular updates, proper configuration, and following best practices are essential for maintaining a secure system.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Firewall (firewalld)</h2>
+                            <p>Oreon uses <code class="badge badge-ghost">firewalld</code> as the default firewall management tool, providing a dynamic interface to manage iptables rules.</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Basic Commands</h4>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code># Check status
+sudo firewall-cmd --state
+
+# List active zones
+sudo firewall-cmd --get-active-zones
+
+# List services in default zone
+sudo firewall-cmd --list-services</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Managing Services</h4>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code># Add service permanently
+sudo firewall-cmd --add-service=ssh --permanent
+
+# Remove service
+sudo firewall-cmd --remove-service=http --permanent
+
+# Reload firewall
+sudo firewall-cmd --reload</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mb-6">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Advanced Example</h3>
+                                    <p>Allow SSH only from a specific subnet:</p>
+                                    <div class="mockup-code mt-2">
+                                        <pre><code># Remove default ssh service if present
+sudo firewall-cmd --remove-service=ssh --permanent
+# Add specific rule
+sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" service name="ssh" accept' --permanent
+# Reload firewall
+sudo firewall-cmd --reload</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">SELinux</h2>
+                            <p>SELinux (Security-Enhanced Linux) provides Mandatory Access Control (MAC), enforcing fine-grained permissions beyond standard Linux discretionary access controls.</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <div class="card bg-success/10 border border-success/20">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-lock text-2xl text-success mb-2"></i>
+                                        <h3 class="font-bold text-success">Enforcing</h3>
+                                        <p class="text-sm">Actively blocks actions violating policy (Default & Recommended)</p>
+                                    </div>
+                                </div>
+                                <div class="card bg-warning/10 border border-warning/20">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-exclamation-triangle text-2xl text-warning mb-2"></i>
+                                        <h3 class="font-bold text-warning">Permissive</h3>
+                                        <p class="text-sm">Logs violations but does not block them (Useful for debugging)</p>
+                                    </div>
+                                </div>
+                                <div class="card bg-error/10 border border-error/20">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-times text-2xl text-error mb-2"></i>
+                                        <h3 class="font-bold text-error">Disabled</h3>
+                                        <p class="text-sm">SELinux is turned off (Strongly discouraged)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-aurora-600 mb-3">Key SELinux Commands</h3>
+                            <div class="overflow-x-auto mb-6">
+                                <table class="table table-zebra">
+                                    <thead>
+                                        <tr>
+                                            <th>Command</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>sestatus</code></td>
+                                            <td>Check SELinux status and configuration</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>getenforce</code></td>
+                                            <td>Check current enforcement mode</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>sudo setenforce 0</code></td>
+                                            <td>Temporarily set to permissive mode</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>sudo setenforce 1</code></td>
+                                            <td>Temporarily set to enforcing mode</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>ausearch -m avc</code></td>
+                                            <td>Search for SELinux violations in audit log</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">User Privileges & sudo</h2>
+                            <p>Adhere to the principle of least privilege. Avoid using the <code class="badge badge-ghost">root</code> account directly for daily tasks.</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-3">Best Practices</h3>
+                                    <ul class="list-disc list-inside space-y-2">
+                                        <li>Use standard user accounts for daily tasks</li>
+                                        <li>Elevate privileges only when necessary using <code>sudo</code></li>
+                                        <li>Manage sudo permissions carefully using <code>visudo</code></li>
+                                        <li>Grant specific commands rather than full root access</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-3">sudo Configuration</h3>
+                                    <div class="mockup-code text-sm">
+                                        <pre><code># Edit sudoers file safely
+sudo visudo
+
+# Example: Allow user to restart services
+username ALL=(ALL) /bin/systemctl restart *</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">SSH Security</h2>
+                            <p>Secure Shell (SSH) is often the primary remote access method. Proper configuration is crucial for security.</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">SSH Hardening</h4>
+                                    <ul class="text-sm space-y-1">
+                                        <li>• Disable root login</li>
+                                        <li>• Use key-based authentication</li>
+                                        <li>• Change default port</li>
+                                        <li>• Limit user access</li>
+                                        <li>• Use fail2ban for intrusion prevention</li>
+                                    </ul>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Configuration File</h4>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code># Edit SSH config
+sudo nano /etc/ssh/sshd_config
+
+# Key settings:
+Port 2222
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">System Updates</h2>
+                            <p>Keeping the system updated is one of the most critical security practices. Updates patch known vulnerabilities.</p>
+
+                            <div class="alert alert-success mb-6">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Update Strategy</h3>
+                                    <ul class="mt-2">
+                                        <li>• Regularly run <code>sudo dnf update</code></li>
+                                        <li>• Consider configuring automatic updates using <code>dnf-automatic</code></li>
+                                        <li>• Monitor security advisories</li>
+                                        <li>• Test updates in non-production environments first</li>
+                                    </ul>
+                                    <p class="mt-2">See the <a href="system-updates.html" class="link link-primary">System Updates</a> guide for more details.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Additional Security Tools</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Fail2ban</h4>
+                                    <p class="text-sm mb-2">Intrusion prevention system that monitors logs and bans IPs with malicious activity.</p>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code>sudo dnf install fail2ban
+sudo systemctl enable --now fail2ban</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">AIDE</h4>
+                                    <p class="text-sm mb-2">Advanced Intrusion Detection Environment for file integrity monitoring.</p>
+                                    <div class="mockup-code text-xs">
+                                        <pre><code>sudo dnf install aide
+sudo aide --init
+sudo aide --check</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Center - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Desktop</a></li>
+            <li>Software Center</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../admin/package-management.html">Package Management</a></li>
+                                    <li><a href="../admin/system-updates.html">System Updates</a></li>
+                                    <li><a href="../admin/user-management.html">User Management</a></li>
+                                    <li><a href="../admin/security.html">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="applications.html">Default Applications</a></li>
+                                    <li><a href="software-center.html" class="active">Software Center</a></li>
+                                    <li><a href="customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <h1 class="text-4xl font-bold gradient-text mb-6">
+                            <i class="fas fa-store mr-3 text-aurora-500"></i>
+                            Software Center
+                        </h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                Oreon provides a graphical Software Center, making it easy to discover, install, and manage applications without needing to use the command line.
+                            </p>
+
+                            <div class="alert alert-info mb-8">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Easy Software Management</h3>
+                                    <p>The Software Center serves as a user-friendly storefront for browsing, installing, updating, and removing applications with just a few clicks.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Getting Started</h2>
+                            <p>The Oreon Software Center provides a user-friendly graphical interface for managing software on your system. Under the hood, it utilizes the system's package manager (<code class="badge badge-ghost">dnf</code>) and integrates with other packaging formats like Flatpak.</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="card bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-blue-600">
+                                            <i class="fas fa-cube mr-2"></i>
+                                            Traditional Packages
+                                        </h3>
+                                        <p class="text-sm">RPM packages managed by DNF, providing deep system integration and performance.</p>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-gradient-to-br from-green-50 to-green-100 border border-green-200">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-green-600">
+                                            <i class="fas fa-shield-alt mr-2"></i>
+                                            Flatpak Apps
+                                        </h3>
+                                        <p class="text-sm">Sandboxed applications from Flathub, offering enhanced security and broader software selection.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Browsing and Searching</h2>
+                            
+                            <div class="steps mb-6">
+                                <div class="step step-primary">
+                                    <div class="step-content">
+                                        <h3 class="font-semibold">Explore Categories</h3>
+                                        <p class="text-sm">Browse featured applications and categories like Audio & Video, Graphics, Office, Development Tools, and Games.</p>
+                                    </div>
+                                </div>
+                                <div class="step step-primary">
+                                    <div class="step-content">
+                                        <h3 class="font-semibold">Search Applications</h3>
+                                        <p class="text-sm">Use the search bar to find applications by name or keywords. Results update dynamically as you type.</p>
+                                    </div>
+                                </div>
+                                <div class="step step-primary">
+                                    <div class="step-content">
+                                        <h3 class="font-semibold">View Details</h3>
+                                        <p class="text-sm">Click on any application to see descriptions, screenshots, version information, and user reviews.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Installing Applications</h2>
+                            <p>Installing software through the Software Center is straightforward:</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">Installation Process</h4>
+                                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                                        <li>Select an application from browse or search</li>
+                                        <li>Review the application details page</li>
+                                        <li>Click the "Install" button</li>
+                                        <li>Enter your password when prompted</li>
+                                        <li>Wait for download and installation to complete</li>
+                                    </ol>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h4 class="font-semibold mb-2">What Happens</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-sm">
+                                        <li>Dependencies are automatically resolved</li>
+                                        <li>Progress indicator shows download status</li>
+                                        <li>Application appears in your menu when complete</li>
+                                        <li>Desktop shortcuts may be created</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Managing Installed Applications</h2>
+                            
+                            <div class="tabs tabs-boxed mb-6">
+                                <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Installed Apps" checked />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <p>The "Installed" section lists all applications currently on your system that are managed by the package manager or Flatpak. From here you can:</p>
+                                    <ul class="list-disc list-inside mt-2 space-y-1">
+                                        <li>View installed application details</li>
+                                        <li>Remove unwanted applications</li>
+                                        <li>Check application versions</li>
+                                        <li>Review installation dates</li>
+                                    </ul>
+                                </div>
+
+                                <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Removal" />
+                                <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                    <p>To remove an application:</p>
+                                    <ol class="list-decimal list-inside mt-2 space-y-1">
+                                        <li>Navigate to the "Installed" section</li>
+                                        <li>Find the application you want to remove</li>
+                                        <li>Click "Remove" or "Uninstall"</li>
+                                        <li>Confirm the action with your password</li>
+                                        <li>The application and its data will be removed</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Updating Software</h2>
+                            <p>Keeping your applications up-to-date is crucial for security and functionality.</p>
+
+                            <div class="card bg-gradient-to-r from-aurora-50 to-blue-50 border border-aurora-200 mb-6">
+                                <div class="card-body">
+                                    <h3 class="card-title text-aurora-600">
+                                        <i class="fas fa-sync-alt mr-2"></i>
+                                        Update Process
+                                    </h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                        <div>
+                                            <h4 class="font-semibold mb-2">Automatic Checks</h4>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• Software Center checks for updates periodically</li>
+                                                <li>• Notifications appear when updates are available</li>
+                                                <li>• Both system and application updates are detected</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold mb-2">Manual Updates</h4>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• Visit the "Updates" section</li>
+                                                <li>• Review available updates</li>
+                                                <li>• Click "Update All" or select individual updates</li>
+                                                <li>• Authenticate with your password</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Software Sources</h2>
+                            <p>The applications available in the Software Center come from configured software repositories and packaging systems.</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <div class="card bg-red-50 border border-red-200">
+                                    <div class="card-body text-center">
+                                        <i class="fab fa-redhat text-3xl text-red-600 mb-2"></i>
+                                        <h3 class="font-bold text-red-600">Oreon Repositories</h3>
+                                        <p class="text-sm">Official packages tested and optimized for Oreon Linux</p>
+                                    </div>
+                                </div>
+                                <div class="card bg-blue-50 border border-blue-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-cubes text-3xl text-blue-600 mb-2"></i>
+                                        <h3 class="font-bold text-blue-600">EPEL Repository</h3>
+                                        <p class="text-sm">Extra packages for Enterprise Linux compatibility</p>
+                                    </div>
+                                </div>
+                                <div class="card bg-green-50 border border-green-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-shield-alt text-3xl text-green-600 mb-2"></i>
+                                        <h3 class="font-bold text-green-600">Flathub</h3>
+                                        <p class="text-sm">Sandboxed applications with enhanced security</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h3 class="font-bold">Pro Tip</h3>
+                                    <p>Flatpak applications run in a sandboxed environment for enhanced security, while traditional RPM packages provide deeper system integration. Choose the format that best suits your needs!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

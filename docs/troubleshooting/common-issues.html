@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="oreon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Issues - Oreon Project Documentation</title>
+    <link rel="icon" href="../../public/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                </ul>
+            </div>
+            <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
+                <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+                <i class="fas fa-comments mr-2"></i>
+                Oreon Forums
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs text-sm px-4 py-2 bg-white/50">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Documentation</a></li>
+            <li><a href="./">Troubleshooting</a></li>
+            <li>Common Issues</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="card glass-card sticky top-24">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg font-bold gradient-text">Documentation</h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Getting Started</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../">Documentation Overview</a></li>
+                                    <li><a href="../getting-started/installation.html">Installation Guide</a></li>
+                                    <li><a href="../getting-started/post-install.html">Post-Installation Setup</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">System Administration</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../admin/package-management.html">Package Management</a></li>
+                                    <li><a href="../admin/system-updates.html">System Updates</a></li>
+                                    <li><a href="../admin/user-management.html">User Management</a></li>
+                                    <li><a href="../admin/security.html">Security & Hardening</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Desktop Usage</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../desktop/applications.html">Default Applications</a></li>
+                                    <li><a href="../desktop/software-center.html">Software Center</a></li>
+                                    <li><a href="../desktop/customization.html">Desktop Customization</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Advanced Topics</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="../advanced/command-line.html">Command Line</a></li>
+                                    <li><a href="../advanced/virtualization.html">Virtualization</a></li>
+                                    <li><a href="../advanced/development.html">Development Environment</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-aurora-600 mb-2">Troubleshooting</h4>
+                                <ul class="menu menu-compact">
+                                    <li><a href="common-issues.html" class="active">Common Issues</a></li>
+                                    <li><a href="system-logs.html">System Logs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <div class="card glass-card">
+                    <div class="card-body">
+                        <h1 class="text-4xl font-bold gradient-text mb-6">
+                            <i class="fas fa-tools mr-3 text-aurora-500"></i>
+                            Common Issues
+                        </h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl text-base-content/80 mb-8">
+                                Solutions to frequently encountered problems in Oreon Linux. Find quick fixes and step-by-step troubleshooting guides.
+                            </p>
+
+                            <div class="alert alert-info mb-8">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Before You Start</h3>
+                                    <p>Always ensure your system is up to date with <code>sudo dnf update</code> before troubleshooting. Many issues are resolved with the latest updates.</p>
+                                </div>
+                            </div>
+
+                            <!-- Issue Categories -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                                <div class="card bg-red-50 border border-red-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-wifi text-2xl text-red-600 mb-2"></i>
+                                        <h3 class="font-bold text-red-600">Network Issues</h3>
+                                        <p class="text-sm">WiFi, Ethernet, and connectivity problems</p>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-blue-50 border border-blue-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-volume-up text-2xl text-blue-600 mb-2"></i>
+                                        <h3 class="font-bold text-blue-600">Audio/Video</h3>
+                                        <p class="text-sm">Sound, video playback, and media issues</p>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-green-50 border border-green-200">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-desktop text-2xl text-green-600 mb-2"></i>
+                                        <h3 class="font-bold text-green-600">Display Issues</h3>
+                                        <p class="text-sm">Graphics, resolution, and display problems</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Network & Connectivity</h2>
+
+                            <div class="collapse collapse-plus bg-base-200 mb-4">
+                                <input type="radio" name="network-accordion" checked="checked" />
+                                <div class="collapse-title text-lg font-medium">
+                                    WiFi Not Connecting
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-4">
+                                        <p><strong>Symptoms:</strong> Cannot connect to WiFi networks, network not showing up, authentication failures.</p>
+                                        
+                                        <div class="steps">
+                                            <div class="step step-primary">
+                                                <div class="step-content">
+                                                    <h4 class="font-semibold">Check Hardware</h4>
+                                                    <div class="mockup-code text-sm mt-2">
+                                                        <pre><code># Check if WiFi adapter is detected
+lspci | grep -i wireless
+ip link show</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step step-primary">
+                                                <div class="step-content">
+                                                    <h4 class="font-semibold">Restart Network Services</h4>
+                                                    <div class="mockup-code text-sm mt-2">
+                                                        <pre><code># Restart NetworkManager
+sudo systemctl restart NetworkManager
+
+# Reset network interface
+sudo ip link set wlan0 down
+sudo ip link set wlan0 up</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step step-primary">
+                                                <div class="step-content">
+                                                    <h4 class="font-semibold">Check for Driver Issues</h4>
+                                                    <div class="mockup-code text-sm mt-2">
+                                                        <pre><code># Check loaded modules
+lsmod | grep -i wifi
+dmesg | grep -i firmware</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="collapse collapse-plus bg-base-200 mb-4">
+                                <input type="radio" name="network-accordion" />
+                                <div class="collapse-title text-lg font-medium">
+                                    Slow Internet Connection
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-4">
+                                        <p><strong>Symptoms:</strong> Pages load slowly, downloads are slow, high latency.</p>
+                                        
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <h4 class="font-semibold mb-2">Test Connection Speed</h4>
+                                                <div class="mockup-code text-sm">
+                                                    <pre><code># Install speedtest
+sudo dnf install speedtest-cli
+
+# Run speed test
+speedtest-cli</code></pre>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold mb-2">Check DNS Settings</h4>
+                                                <div class="mockup-code text-sm">
+                                                    <pre><code># Check current DNS
+cat /etc/resolv.conf
+
+# Try different DNS (Cloudflare)
+# Edit network connection in Settings</code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Audio & Video Problems</h2>
+
+                            <div class="collapse collapse-plus bg-base-200 mb-4">
+                                <input type="radio" name="audio-accordion" checked="checked" />
+                                <div class="collapse-title text-lg font-medium">
+                                    No Sound Output
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-4">
+                                        <p><strong>Symptoms:</strong> No audio from speakers or headphones, system sounds not working.</p>
+                                        
+                                        <div class="alert alert-warning mb-4">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <div>
+                                                <h4 class="font-bold">Quick Checks</h4>
+                                                <ul class="mt-2">
+                                                    <li>• Verify volume is not muted or at zero</li>
+                                                    <li>• Check output device in Settings → Sound</li>
+                                                    <li>• Test with different applications</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="mockup-code">
+                                            <pre><code># Check audio devices
+aplay -l
+
+# Test PulseAudio
+pulseaudio --check -v
+
+# Restart audio services
+systemctl --user restart pulseaudio
+sudo alsa force-reload</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="collapse collapse-plus bg-base-200 mb-4">
+                                <input type="radio" name="audio-accordion" />
+                                <div class="collapse-title text-lg font-medium">
+                                    Video Playback Issues
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-4">
+                                        <p><strong>Symptoms:</strong> Videos won't play, codec errors, poor video quality.</p>
+                                        
+                                        <div class="mockup-code">
+                                            <pre><code># Install additional codecs
+sudo dnf install gstreamer1-plugins-base gstreamer1-plugins-good
+sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-ugly-free
+
+# For proprietary codecs (enable RPM Fusion first)
+sudo dnf install gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Display & Graphics</h2>
+
+                            <div class="collapse collapse-plus bg-base-200 mb-4">
+                                <input type="radio" name="display-accordion" checked="checked" />
+                                <div class="collapse-title text-lg font-medium">
+                                    Screen Resolution Problems
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-4">
+                                        <p><strong>Symptoms:</strong> Wrong resolution, display too large/small, multiple monitor issues.</p>
+                                        
+                                        <div class="tabs tabs-boxed">
+                                            <input type="radio" name="resolution_tabs" role="tab" class="tab" aria-label="GUI Method" checked />
+                                            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                                <h4 class="font-semibold mb-2">Using Settings</h4>
+                                                <ol class="list-decimal list-inside space-y-1">
+                                                    <li>Open Settings → Displays</li>
+                                                    <li>Select your monitor</li>
+                                                    <li>Choose the correct resolution from the dropdown</li>
+                                                    <li>Click "Apply" and confirm changes</li>
+                                                </ol>
+                                            </div>
+
+                                            <input type="radio" name="resolution_tabs" role="tab" class="tab" aria-label="Command Line" />
+                                            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                                                <h4 class="font-semibold mb-2">Using xrandr</h4>
+                                                <div class="mockup-code text-sm">
+                                                    <pre><code># List available resolutions
+xrandr
+
+# Set resolution
+xrandr --output HDMI-1 --mode 1920x1080
+
+# For multiple monitors
+xrandr --output HDMI-1 --right-of eDP-1</code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">Software & Package Issues</h2>
+
+                            <div class="collapse collapse-plus bg-base-200 mb-4">
+                                <input type="radio" name="software-accordion" checked="checked" />
+                                <div class="collapse-title text-lg font-medium">
+                                    Package Installation Fails
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-4">
+                                        <p><strong>Symptoms:</strong> DNF errors, dependency conflicts, corrupted packages.</p>
+                                        
+                                        <div class="steps">
+                                            <div class="step step-primary">
+                                                <div class="step-content">
+                                                    <h4 class="font-semibold">Clean Package Cache</h4>
+                                                    <div class="mockup-code text-sm mt-2">
+                                                        <pre><code>sudo dnf clean all
+sudo dnf makecache</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step step-primary">
+                                                <div class="step-content">
+                                                    <h4 class="font-semibold">Check for Conflicts</h4>
+                                                    <div class="mockup-code text-sm mt-2">
+                                                        <pre><code>sudo dnf check
+sudo dnf distro-sync</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step step-primary">
+                                                <div class="step-content">
+                                                    <h4 class="font-semibold">Reset DNF Database</h4>
+                                                    <div class="mockup-code text-sm mt-2">
+                                                        <pre><code>sudo rm -rf /var/cache/dnf
+sudo dnf makecache</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-bold text-aurora-600 mb-4">General Troubleshooting Tips</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Essential Commands</h3>
+                                    <div class="space-y-2 text-sm">
+                                        <div><code>journalctl -xe</code> - View system logs</div>
+                                        <div><code>dmesg</code> - Kernel messages</div>
+                                        <div><code>systemctl status</code> - Service status</div>
+                                        <div><code>top</code> or <code>htop</code> - Process monitor</div>
+                                        <div><code>df -h</code> - Disk usage</div>
+                                        <div><code>free -h</code> - Memory usage</div>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-base-200 p-4">
+                                    <h3 class="font-semibold mb-3">Best Practices</h3>
+                                    <ul class="space-y-1 text-sm">
+                                        <li>• Keep system updated regularly</li>
+                                        <li>• Create backups before major changes</li>
+                                        <li>• Check system logs for error messages</li>
+                                        <li>• Search online with specific error messages</li>
+                                        <li>• Ask for help on Oreon forums</li>
+                                        <li>• Document successful solutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-6">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <h3 class="font-bold">Need More Help?</h3>
+                                    <p>If these solutions don't resolve your issue, visit the <a href="https://forums.oreonproject.org" class="link link-primary">Oreon Forums</a> for community support or check our <a href="system-logs.html" class="link link-primary">System Logs</a> guide for advanced troubleshooting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <img src="../../public/images/oreonlogo.png" alt="Oreon Project Logo" class="h-12 w-auto mb-4" style="filter: brightness(0) invert(1);">
+            <p>Oreon Project<br/>Where open source becomes something special</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Resources</h6>
+            <a href="../../downloads/" class="link link-hover">Download</a>
+            <a href="../" class="link link-hover">Documentation</a>
+            <a href="../../oreon-10/" class="link link-hover">Oreon 10</a>
+            <a href="../../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
+            <a href="../../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Community</h6>
+            <a href="https://discord.gg/2Yyacu58Ap" class="link link-hover">Discord</a>
+            <a href="../../our-team/" class="link link-hover">Our Team</a>
+            <a href="https://github.com/oreonproject" class="link link-hover">GitHub</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="../../privacy-policy.html" class="link link-hover">Privacy Policy</a>
+            <a href="../../terms-of-service.html" class="link link-hover">Terms of Service</a>
+        </nav>
+    </footer>
+    <footer class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-neutral-content/10">
+        <aside>
+            <p>© 2025 Oreon Project. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
