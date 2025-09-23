@@ -11,7 +11,7 @@
 
 1. Clone or navigate to the project directory:
    ```bash
-   cd /home/blester/oreonproject4/modern_site
+   cd oreon-site
    ```
 
 2. Install dependencies:
