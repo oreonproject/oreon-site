@@ -13,7 +13,7 @@
 </head>
 <body class="min-h-screen bg-gradient-to-br from-emerald-50/30 via-white to-teal-50/30" style="background-image: radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.07) 0%, transparent 50%), radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);">
     <!-- Navigation -->
-    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+    <nav class="navbar navbar-dark backdrop-blur-md shadow-xl sticky top-0 z-50 bg-gray-900/95 border-b border-white/10">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
@@ -21,11 +21,11 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
-                    <li><a href="help/" class="text-white hover:bg-white/10">Help & Support</a></li>
-                    <li><a href="oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
-                    <li><a href="our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
-                    <li><a href="downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-800 rounded-box w-52 border border-white/10">
+                    <li><a href="help/" class="text-white hover:bg-white/10" data-translate="nav.help">Help & Support</a></li>
+                    <li><a href="oreon-10/" class="text-white hover:bg-white/10" data-translate="nav.oreon10">Oreon 10</a></li>
+                    <li><a href="our-team/" class="text-white hover:bg-white/10" data-translate="nav.team">Our Team</a></li>
+                    <li><a href="downloads/" class="text-white hover:bg-white/10" data-translate="nav.download">Download</a></li>
                 </ul>
             </div>
             <a href="/" class="btn btn-ghost text-xl hover:bg-white/10">
@@ -34,108 +34,334 @@
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a href="help/" class="text-white hover:bg-white/10">Help & Support</a></li>
-                <li><a href="oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
-                <li><a href="our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
-                <li><a href="downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                <li><a href="help/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.help">Help & Support</a></li>
+                <li><a href="oreon-10/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.oreon10">Oreon 10</a></li>
+                <li><a href="our-team/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.team">Our Team</a></li>
+                <li><a href="downloads/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.download">Download</a></li>
             </ul>
         </div>
-        <div class="navbar-end">
-            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
-                <i class="fas fa-comments mr-2"></i>
-                Oreon Forums
-            </a>
-        </div>
-    </nav>
+        <div class="navbar-end flex items-center gap-2">
+            <!-- Mobile Search Toggle -->
+            <button id="mobileSearchToggle" class="btn btn-ghost text-white hover:bg-white/10 md:hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </button>
 
-    <!-- Hero Section -->
-    <section class="hero min-h-screen bg-white relative overflow-hidden" style="background-image: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.07) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(20, 184, 166, 0.06) 0%, transparent 30%), radial-gradient(circle at 60% 10%, rgba(16, 185, 129, 0.05) 0%, transparent 40%), radial-gradient(circle at 10% 30%, rgba(20, 184, 166, 0.04) 0%, transparent 50%);">
-        <div class="hero-content text-center">
-            <div class="max-w-6xl">
-                <h1 class="text-5xl md:text-7xl font-semibold mb-8 mt-16">
-                    <span class="block">A distro that</span>
-                    <span class="font-bold gradient-text">actually rocks.</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-base-content/70 mb-16 max-w-2xl mx-auto">
-                    Oreon Project is dedicated to making Enterprise Linux more suitable for desktops and laptops, providing the best user experience right out of the gate.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                    <a href="downloads/" class="btn btn-primary btn-lg">
-                        <i class="fas fa-download mr-2"></i>
-                        Download Now
-                    </a>
-                    <a href="help/" class="btn btn-secondary btn-lg">
-                        Help & Support
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center gap-2">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                           class="input input-bordered h-10 bg-white/10 border-white/20 text-white placeholder-white/60 w-52 pl-4 pr-4 focus:bg-white/20 focus:border-white/40 focus:ring-0 transition-all duration-200">
+                    <div id="searchResults" class="absolute top-full left-0 right-0 mt-2 bg-gray-800 border border-white/10 rounded-lg shadow-xl hidden max-h-96 overflow-y-auto z-50 w-64">
+                        <!-- Search results will be populated here -->
+                    </div>
                 </div>
-                
-                <!-- Large Image Showcase -->
-                <div class="mt-24">
-                    <div class="max-w-6xl mx-auto">
-                        <div class="relative">
-                            <!-- Large image container -->
-                            <div class="relative mx-auto">
-                                <div class="bg-gradient-to-br from-emerald-50/30 to-teal-50/30 rounded-3xl p-8 shadow-2xl border border-gray-100/50" style="background-image: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 70%), radial-gradient(circle at 70% 70%, rgba(20, 184, 166, 0.04) 0%, transparent 70%);">
-                                    <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30">
-                                        <img src="public/images/oreon1.png" alt="Oreon Linux Desktop" 
-                                             class="w-full h-auto rounded-2xl shadow-lg">
-                                    </div>
-                                </div>
-                                
+                <button id="searchBtn" class="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Search Modal -->
+            <div id="mobileSearchModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden md:hidden">
+                <div class="flex items-start justify-center pt-20 px-4">
+                    <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-md border border-white/10">
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-4">
+                                <input type="text" id="mobileSearchInput" placeholder="Search..." 
+                                       class="input input-bordered bg-white/10 border-white/20 text-white placeholder-white/60 flex-1 focus:bg-white/20 focus:border-white/40">
+                                <button id="mobileSearchBtn" class="btn btn-primary">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </button>
+                                <button id="closeMobileSearch" class="btn btn-ghost text-white">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div id="mobileSearchResults" class="max-h-64 overflow-y-auto">
+                                <!-- Mobile search results will be populated here -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Language Selector -->
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost text-white hover:bg-white/10 border border-white/20">
+                    <i class="fas fa-globe mr-2"></i>
+                    <span id="currentLang">EN</span>
+                    <i class="fas fa-chevron-down ml-1"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-gray-800 rounded-box w-32 border border-white/10 z-50">
+                    <li><a href="#" onclick="changeLanguage('en')" class="text-white hover:bg-white/10">🇺🇸 English</a></li>
+                    <li><a href="#" onclick="changeLanguage('es')" class="text-white hover:bg-white/10">🇪🇸 Español</a></li>
+                    <li><a href="#" onclick="changeLanguage('fr')" class="text-white hover:bg-white/10">🇫🇷 Français</a></li>
+                    <li><a href="#" onclick="changeLanguage('de')" class="text-white hover:bg-white/10">🇩🇪 Deutsch</a></li>
+                    <li><a href="#" onclick="changeLanguage('it')" class="text-white hover:bg-white/10">🇮🇹 Italiano</a></li>
+                    <li><a href="#" onclick="changeLanguage('pt')" class="text-white hover:bg-white/10">🇵🇹 Português</a></li>
+                </ul>
+            </div>
+
+            <a href="https://forums.oreonproject.org" class="btn bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white border-0 shadow-lg">
+                <i class="fas fa-comments mr-2"></i>
+                <span data-translate="nav.forums">Forums</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Announcement Banner -->
+    <div id="announcementBanner" class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-3 relative hidden">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3 flex-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="text-sm md:text-base font-medium" id="announcementText">
+                    Introducing our Matrix group. Chat with our team and community today!
+                </p>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="https://matrix.to/#/#oreonproject:matrix.org" class="text-sm font-semibold hover:underline whitespace-nowrap">
+                    Join Now →
+                </a>
+                <button onclick="dismissAnnouncement()" class="ml-2 p-1 hover:bg-white/20 rounded transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-emerald-900 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div class="absolute bottom-20 left-1/3 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
 
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+
+        <div class="relative z-10 container mx-auto px-4 pt-20 pb-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                <!-- Left Content -->
+                <div class="space-y-8">
+                    <!-- Main Heading -->
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">
+                            <span class="block" data-translate="hero.title1">A distro that</span>
+                            <span class="block bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-400 bg-clip-text text-transparent" data-translate="hero.title2">actually rocks.</span>
+                        </h1>
+                        <p class="text-xl text-gray-300 max-w-lg leading-relaxed" data-translate="hero.description">
+                            Oreon Project is dedicated to making Enterprise Linux more suitable for desktops and laptops, providing the best user experience right out of the gate.
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="downloads/" class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 transform hover:-translate-y-1">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            <span data-translate="hero.download">Download Now</span>
+                        </a>
+                        <a href="help/" class="group inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl transition-all duration-300 hover:border-white/40">
+                            <span data-translate="hero.help">Help & Support</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Content - Desktop Showcase -->
+                <div class="relative">
+                    <!-- Floating Cards -->
+                    <div class="relative z-10">
+                        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-2xl">
+                            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-4 shadow-inner">
+                                <img src="public/images/oreon1.png" alt="Oreon Linux Desktop" 
+                                     class="w-full h-auto rounded-lg shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-emerald-500/20 rounded-full blur-xl animate-bounce"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-500/20 rounded-full blur-xl animate-bounce delay-1000"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-emerald-50/15" style="background-image: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 60%), radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.03) 0%, transparent 40%);">
-        <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Enterprise Linux but a little friendlier</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+    <section class="relative py-32 bg-white overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header with Badge -->
+            <div class="text-center mb-24">
+                <div class="inline-flex items-center px-5 py-2 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 border border-emerald-200 text-emerald-700 text-sm font-semibold mb-8 shadow-sm">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
+                    <span data-translate="features.badge">Why Choose Oreon</span>
+                </div>
+                <h2 class="text-5xl lg:text-7xl font-bold mb-8 text-gray-900 leading-tight" data-translate="features.title">
+                    Enterprise Linux but a<br/>little friendlier
+                </h2>
+                <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed" data-translate="features.description">
                     Our primary goal is to make Enterprise Linux more suitable towards use on desktops and laptops. We focus on providing the best user experience right out of the gate.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card bg-white shadow-lg border border-gray-200 hover:shadow-xl">
-                    <div class="card-body items-center text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-face-smile text-6xl text-emerald-600"></i>
+            <!-- Bento Grid Layout -->
+            <div class="grid lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+                <!-- Large Feature Card - Friendly Defaults -->
+                <div class="lg:col-span-4 lg:row-span-2 group relative">
+                    <div class="h-full bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-10 lg:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02] overflow-hidden">
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                        
+                        <div class="relative z-10 h-full flex flex-col">
+                            <!-- Icon -->
+                            <div class="mb-8">
+                                <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30">
+                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-3xl lg:text-4xl font-bold text-white mb-6" data-translate="features.friendly.title">
+                                    Friendly Defaults
+                                </h3>
+                                <p class="text-lg text-white/90 leading-relaxed max-w-lg" data-translate="features.friendly.description">
+                                    Oreon ships with the GNOME desktop by default with a few tweaks and extra applications to fulfill the user's needs.
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="card-title text-2xl font-bold mb-4 text-gray-900">Friendly Defaults</h3>
-                        <p class="text-gray-600">
-                            Oreon ships with the GNOME desktop by default with a few tweaks and extra applications to fulfill the user's needs.
-                        </p>
                     </div>
                 </div>
 
-                <div class="card bg-white shadow-lg border border-gray-200 hover:shadow-xl">
-                    <div class="card-body items-center text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-arrows-rotate text-6xl text-teal-600"></i>
+                <!-- Medium Feature Card - Continuous Updates -->
+                <div class="lg:col-span-2 lg:row-span-1 group">
+                    <div class="h-full bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 transform hover:-translate-y-2">
+                        <!-- Icon -->
+                        <div class="mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                            </div>
                         </div>
-                        <h3 class="card-title text-2xl font-bold mb-4 text-gray-900">Continuous Updates</h3>
-                        <p class="text-gray-600">
+                        
+                        <!-- Content -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.updates.title">
+                            Continuous Updates
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed" data-translate="features.updates.description">
                             With the help of upstream and our team, we are able to promise several years of security fixes and new features to each Oreon release.
                         </p>
                     </div>
                 </div>
 
-                <div class="card bg-white shadow-lg border border-gray-200 hover:shadow-xl">
-                    <div class="card-body items-center text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-server text-6xl text-blue-600"></i>
+                <!-- Medium Feature Card - Enterprise Linux -->
+                <div class="lg:col-span-2 lg:row-span-1 group">
+                    <div class="h-full bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden relative">
+                        <!-- Decorative Grid -->
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M0 0h1v1H0V0zm15 0h1v1h-1V0zM0 15h1v1H0v-1zm15 0h1v1h-1v-1z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        
+                        <div class="relative z-10">
+                            <!-- Icon -->
+                            <div class="mb-6">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <h3 class="text-2xl font-bold text-white mb-4" data-translate="features.enterprise.title">
+                                Built on Enterprise Linux
+                            </h3>
+                            <p class="text-white/90 leading-relaxed" data-translate="features.enterprise.description">
+                                Oreon is based on AlmaLinux and compatible with all its packages. Take advantage of the stability and security of Enterprise Linux.
+                            </p>
                         </div>
-                        <h3 class="card-title text-2xl font-bold mb-4 text-gray-900">Built on Enterprise Linux</h3>
-                        <p class="text-gray-600">
-                            Oreon is based on AlmaLinux and compatible with all its packages. Take advantage of the stability and security of Enterprise Linux.
-                        </p>
+                    </div>
+                </div>
+
+                <!-- Small Feature Card - Security -->
+                <div class="lg:col-span-3 group">
+                    <div class="h-full bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 transform hover:-translate-y-2">
+                        <div class="flex items-start space-x-5">
+                            <!-- Icon -->
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3" data-translate="features.security.title">
+                                    Security First
+                                </h4>
+                                <p class="text-gray-600 leading-relaxed" data-translate="features.security.description">
+                                    Built on the secure foundation of AlmaLinux with regular security updates and patches.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Feature Card - Performance -->
+                <div class="lg:col-span-3 group">
+                    <div class="h-full bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 transform hover:-translate-y-2">
+                        <div class="flex items-start space-x-5">
+                            <!-- Icon -->
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3" data-translate="features.performance.title">
+                                    High Performance
+                                </h4>
+                                <p class="text-gray-600 leading-relaxed" data-translate="features.performance.description">
+                                    Optimized for speed and efficiency with minimal resource usage and fast boot times.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,42 +369,139 @@
     </section>
 
     <!-- Versions Section -->
-    <section class="py-20 px-4 bg-gradient-to-tr from-white via-teal-50/8 to-blue-50/10" style="background-image: radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.03) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.025) 0%, transparent 50%), radial-gradient(circle at 60% 60%, rgba(59, 130, 246, 0.02) 0%, transparent 60%);">
-        <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Current Versions</h2>
-                <p class="text-xl text-gray-600">
+    <section class="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-10 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-6">
+                    <div class="w-2 h-2 bg-teal-500 rounded-full mr-2"></div>
+                    <span data-translate="versions.badge">Choose Your Version</span>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6 text-gray-900" data-translate="versions.title">Current Versions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-translate="versions.description">
                     Oreon Linux is available in multiple versions to suit your needs.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="card glass-card hover:shadow-2xl">
-                    <div class="card-body">
-                        <h3 class="card-title text-3xl font-bold text-aurora-600 mb-4">Oreon 10</h3>
-                        <p class="text-base-content/80 mb-6">
-                            Based on AlmaLinux 10, this is our latest and most advanced release featuring the newest packages and technologies.
-                        </p>
-                        <div class="card-actions justify-end">
-                            <a href="oreon-10/" class="btn btn-secondary">Learn More</a>
-                            <a href="downloads/" class="btn btn-primary">Download</a>
+            <!-- Versions Grid -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                <!-- Oreon 10 -->
+                <div class="group relative">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                        <!-- Background Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <!-- Version Badge -->
+                        <div class="absolute top-6 right-6">
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                <span data-translate="versions.latest">Latest</span>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10">
+                            <!-- Content -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4" data-translate="versions.oreon10.title">Oreon 10</h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed" data-translate="versions.oreon10.description">
+                                Based on AlmaLinux 10, this is our latest and most advanced release featuring the newest packages and technologies.
+                            </p>
+
+                            <!-- Features List -->
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-center text-gray-600">
+                                    <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span data-translate="versions.oreon10.feature1">Latest GNOME Desktop</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span data-translate="versions.oreon10.feature2">Modern Package Manager</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span data-translate="versions.oreon10.feature3">Enhanced Security</span>
+                                </div>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-4">
+                                <a href="oreon-10/" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-xl text-center transition-colors duration-300">
+                                    <span data-translate="versions.learn">Learn More</span>
+                                </a>
+                                <a href="downloads/" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
+                                    <span data-translate="versions.download">Download</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card glass-card hover:shadow-2xl">
-                    <div class="card-body">
-                        <h3 class="card-title text-3xl font-bold text-aurora-600 mb-4">Oreon Lime (R2)</h3>
-                        <p class="text-base-content/80 mb-6">
-                            Based on AlmaLinux 9, this stable release offers long-term support and proven reliability for your daily computing needs.
-                        </p>
-                        <div class="card-actions justify-end">
-                            <a href="oreon-lime-r2/" class="btn btn-secondary">Learn More</a>
-                            <a href="downloads/" class="btn btn-primary">Download</a>
+                <!-- Oreon Lime R2 -->
+                <div class="group relative">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                        <!-- Background Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <!-- Version Badge -->
+                        <div class="absolute top-6 right-6">
+                            <div class="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                <span data-translate="versions.stable">Stable</span>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10">
+                            <!-- Content -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4" data-translate="versions.lime.title">Oreon Lime (R2)</h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed" data-translate="versions.lime.description">
+                                Based on AlmaLinux 9, this stable release offers long-term support and proven reliability for your daily computing needs.
+                            </p>
+
+                            <!-- Features List -->
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-center text-gray-600">
+                                    <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span data-translate="versions.lime.feature1">Long-term Support</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span data-translate="versions.lime.feature2">Proven Stability</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span data-translate="versions.lime.feature3">Enterprise Ready</span>
+                                </div>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-4">
+                                <a href="oreon-lime-r2/" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-xl text-center transition-colors duration-300">
+                                    <span data-translate="versions.learn">Learn More</span>
+                                </a>
+                                <a href="downloads/" class="flex-1 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
+                                    <span data-translate="versions.download">Download</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -245,6 +568,252 @@
     </footer>
 
     <script>
+        // Translation system
+        const translations = {
+            en: {
+                'nav.help': 'Help & Support',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Our Team',
+                'nav.download': 'Download',
+                'nav.forums': 'Forums',
+                'hero.badge': 'Enterprise Linux Made Simple',
+                'hero.title1': 'A distro that',
+                'hero.title2': 'actually rocks.',
+                'hero.description': 'Oreon Project is dedicated to making Enterprise Linux more suitable for desktops and laptops, providing the best user experience right out of the gate.',
+                'hero.download': 'Download Now',
+                'hero.help': 'Help & Support',
+                'hero.stats.releases': 'Releases',
+                'hero.stats.users': 'Users',
+                'hero.stats.support': 'Support',
+                'features.badge': 'Why Choose Oreon',
+                'features.title': 'Enterprise Linux but a little friendlier',
+                'features.description': 'Our primary goal is to make Enterprise Linux more suitable towards use on desktops and laptops. We focus on providing the best user experience right out of the gate.',
+                'features.explore': 'Explore More',
+                'features.friendly.title': 'Friendly Defaults',
+                'features.friendly.description': 'Oreon ships with the GNOME desktop by default with a few tweaks and extra applications to fulfill the user\'s needs.',
+                'features.updates.title': 'Continuous Updates',
+                'features.updates.description': 'With the help of upstream and our team, we are able to promise several years of security fixes and new features to each Oreon release.',
+                'features.enterprise.title': 'Built on Enterprise Linux',
+                'features.enterprise.description': 'Oreon is based on AlmaLinux and compatible with all its packages. Take advantage of the stability and security of Enterprise Linux.',
+                'features.security.title': 'Security First',
+                'features.security.description': 'Built on the secure foundation of AlmaLinux with regular security updates and patches.',
+                'features.performance.title': 'High Performance',
+                'features.performance.description': 'Optimized for speed and efficiency with minimal resource usage and fast boot times.',
+                'versions.badge': 'Choose Your Version',
+                'versions.title': 'Current Versions',
+                'versions.description': 'Oreon Linux is available in multiple versions to suit your needs.',
+                'versions.latest': 'Latest',
+                'versions.stable': 'Stable',
+                'versions.learn': 'Learn More',
+                'versions.download': 'Download',
+                'versions.oreon10.title': 'Oreon 10',
+                'versions.oreon10.description': 'Based on AlmaLinux 10, this is our latest and most advanced release featuring the newest packages and technologies.',
+                'versions.oreon10.feature1': 'Latest GNOME Desktop',
+                'versions.oreon10.feature2': 'Modern Package Manager',
+                'versions.oreon10.feature3': 'Enhanced Security',
+                'versions.lime.title': 'Oreon Lime (R2)',
+                'versions.lime.description': 'Based on AlmaLinux 9, this stable release offers long-term support and proven reliability for your daily computing needs.',
+                'versions.lime.feature1': 'Long-term Support',
+                'versions.lime.feature2': 'Proven Stability',
+                'versions.lime.feature3': 'Enterprise Ready',
+                'versions.comparison.title': 'Version Comparison',
+                'versions.comparison.feature': 'Feature',
+                'versions.comparison.base': 'Base System',
+                'versions.comparison.support': 'Support Period',
+                'versions.comparison.desktop': 'Desktop Environment'
+            },
+            es: {
+                'nav.help': 'Ayuda y Soporte',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Nuestro Equipo',
+                'nav.download': 'Descargar',
+                'nav.forums': 'Foros',
+                'hero.title1': 'Una distro que',
+                'hero.title2': 'realmente funciona.',
+                'hero.description': 'Oreon Project se dedica a hacer que Enterprise Linux sea más adecuado para escritorios y portátiles, proporcionando la mejor experiencia de usuario desde el primer momento.',
+                'hero.download': 'Descargar Ahora',
+                'hero.help': 'Ayuda y Soporte',
+                'features.title': 'Enterprise Linux pero un poco más amigable',
+                'features.description': 'Nuestro objetivo principal es hacer que Enterprise Linux sea más adecuado para uso en escritorios y portátiles. Nos enfocamos en proporcionar la mejor experiencia de usuario desde el primer momento.',
+                'features.friendly.title': 'Configuración Amigable',
+                'features.friendly.description': 'Oreon viene con el escritorio GNOME por defecto con algunos ajustes y aplicaciones adicionales para satisfacer las necesidades del usuario.',
+                'features.updates.title': 'Actualizaciones Continuas',
+                'features.updates.description': 'Con la ayuda de upstream y nuestro equipo, podemos prometer varios años de correcciones de seguridad y nuevas características para cada lanzamiento de Oreon.',
+                'features.enterprise.title': 'Construido sobre Enterprise Linux',
+                'features.enterprise.description': 'Oreon está basado en AlmaLinux y es compatible con todos sus paquetes. Aprovecha la estabilidad y seguridad de Enterprise Linux.'
+            },
+            fr: {
+                'nav.help': 'Aide et Support',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Notre Équipe',
+                'nav.download': 'Télécharger',
+                'nav.forums': 'Forums',
+                'hero.title1': 'Une distro qui',
+                'hero.title2': 'fonctionne vraiment.',
+                'hero.description': 'Oreon Project se consacre à rendre Enterprise Linux plus adapté aux ordinateurs de bureau et portables, offrant la meilleure expérience utilisateur dès le départ.',
+                'hero.download': 'Télécharger Maintenant',
+                'hero.help': 'Aide et Support',
+                'features.title': 'Enterprise Linux mais un peu plus convivial',
+                'features.description': 'Notre objectif principal est de rendre Enterprise Linux plus adapté à l\'utilisation sur ordinateurs de bureau et portables. Nous nous concentrons sur la fourniture de la meilleure expérience utilisateur dès le départ.',
+                'features.friendly.title': 'Paramètres Conviviaux',
+                'features.friendly.description': 'Oreon est livré avec le bureau GNOME par défaut avec quelques ajustements et applications supplémentaires pour répondre aux besoins de l\'utilisateur.',
+                'features.updates.title': 'Mises à Jour Continues',
+                'features.updates.description': 'Avec l\'aide d\'upstream et de notre équipe, nous pouvons promettre plusieurs années de corrections de sécurité et de nouvelles fonctionnalités pour chaque version d\'Oreon.',
+                'features.enterprise.title': 'Construit sur Enterprise Linux',
+                'features.enterprise.description': 'Oreon est basé sur AlmaLinux et compatible avec tous ses paquets. Profitez de la stabilité et de la sécurité d\'Enterprise Linux.'
+            },
+            de: {
+                'nav.help': 'Hilfe & Support',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Unser Team',
+                'nav.download': 'Herunterladen',
+                'nav.forums': 'Foren',
+                'hero.title1': 'Eine Distro, die',
+                'hero.title2': 'wirklich funktioniert.',
+                'hero.description': 'Oreon Project widmet sich der Verbesserung von Enterprise Linux für Desktop- und Laptop-Nutzung und bietet die beste Benutzererfahrung von Anfang an.',
+                'hero.download': 'Jetzt Herunterladen',
+                'hero.help': 'Hilfe & Support',
+                'features.title': 'Enterprise Linux aber etwas benutzerfreundlicher',
+                'features.description': 'Unser Hauptziel ist es, Enterprise Linux besser für Desktop- und Laptop-Nutzung geeignet zu machen. Wir konzentrieren uns darauf, die beste Benutzererfahrung von Anfang an zu bieten.',
+                'features.friendly.title': 'Benutzerfreundliche Standardeinstellungen',
+                'features.friendly.description': 'Oreon wird standardmäßig mit dem GNOME-Desktop geliefert, mit einigen Anpassungen und zusätzlichen Anwendungen, um die Bedürfnisse des Benutzers zu erfüllen.',
+                'features.updates.title': 'Kontinuierliche Updates',
+                'features.updates.description': 'Mit Hilfe von Upstream und unserem Team können wir mehrere Jahre Sicherheitskorrekturen und neue Funktionen für jede Oreon-Version versprechen.',
+                'features.enterprise.title': 'Auf Enterprise Linux aufgebaut',
+                'features.enterprise.description': 'Oreon basiert auf AlmaLinux und ist mit allen seinen Paketen kompatibel. Nutzen Sie die Stabilität und Sicherheit von Enterprise Linux.'
+            },
+            it: {
+                'nav.help': 'Aiuto e Supporto',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Il Nostro Team',
+                'nav.download': 'Scarica',
+                'nav.forums': 'Forum',
+                'hero.title1': 'Una distro che',
+                'hero.title2': 'funziona davvero.',
+                'hero.description': 'Oreon Project si dedica a rendere Enterprise Linux più adatto per desktop e laptop, fornendo la migliore esperienza utente fin dall\'inizio.',
+                'hero.download': 'Scarica Ora',
+                'hero.help': 'Aiuto e Supporto',
+                'features.title': 'Enterprise Linux ma un po\' più amichevole',
+                'features.description': 'Il nostro obiettivo principale è rendere Enterprise Linux più adatto all\'uso su desktop e laptop. Ci concentriamo nel fornire la migliore esperienza utente fin dall\'inizio.',
+                'features.friendly.title': 'Impostazioni Amichevoli',
+                'features.friendly.description': 'Oreon viene fornito con il desktop GNOME di default con alcune modifiche e applicazioni extra per soddisfare le esigenze dell\'utente.',
+                'features.updates.title': 'Aggiornamenti Continui',
+                'features.updates.description': 'Con l\'aiuto di upstream e del nostro team, possiamo promettere diversi anni di correzioni di sicurezza e nuove funzionalità per ogni rilascio di Oreon.',
+                'features.enterprise.title': 'Costruito su Enterprise Linux',
+                'features.enterprise.description': 'Oreon è basato su AlmaLinux e compatibile con tutti i suoi pacchetti. Approfitta della stabilità e sicurezza di Enterprise Linux.'
+            },
+            pt: {
+                'nav.help': 'Ajuda e Suporte',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Nossa Equipe',
+                'nav.download': 'Baixar',
+                'nav.forums': 'Fóruns',
+                'hero.title1': 'Uma distro que',
+                'hero.title2': 'realmente funciona.',
+                'hero.description': 'Oreon Project se dedica a tornar o Enterprise Linux mais adequado para desktops e laptops, fornecendo a melhor experiência do usuário desde o início.',
+                'hero.download': 'Baixar Agora',
+                'hero.help': 'Ajuda e Suporte',
+                'features.title': 'Enterprise Linux mas um pouco mais amigável',
+                'features.description': 'Nosso objetivo principal é tornar o Enterprise Linux mais adequado para uso em desktops e laptops. Focamos em fornecer a melhor experiência do usuário desde o início.',
+                'features.friendly.title': 'Configurações Amigáveis',
+                'features.friendly.description': 'Oreon vem com o desktop GNOME por padrão com algumas modificações e aplicativos extras para atender às necessidades do usuário.',
+                'features.updates.title': 'Atualizações Contínuas',
+                'features.updates.description': 'Com a ajuda do upstream e nossa equipe, podemos prometer vários anos de correções de segurança e novos recursos para cada lançamento do Oreon.',
+                'features.enterprise.title': 'Construído no Enterprise Linux',
+                'features.enterprise.description': 'Oreon é baseado no AlmaLinux e compatível com todos os seus pacotes. Aproveite a estabilidade e segurança do Enterprise Linux.'
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        // Announcement Banner
+        function dismissAnnouncement() {
+            const banner = document.getElementById('announcementBanner');
+            banner.classList.add('hidden');
+            localStorage.setItem('announcementDismissed', 'true');
+        }
+
+        // Show announcement if not dismissed
+        if (!localStorage.getItem('announcementDismissed')) {
+            const banner = document.getElementById('announcementBanner');
+            if (banner) {
+                banner.classList.remove('hidden');
+            }
+        }
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            document.getElementById('currentLang').textContent = lang.toUpperCase();
+            
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Search functionality
+        const searchData = [
+            { title: 'Help & Support', url: 'help/', description: 'Get help and support for Oreon Linux' },
+            { title: 'Oreon 10', url: 'oreon-10/', description: 'Latest Oreon release based on AlmaLinux 10' },
+            { title: 'Our Team', url: 'our-team/', description: 'Meet the Oreon Project team members' },
+            { title: 'Download', url: 'downloads/', description: 'Download Oreon Linux distributions' },
+            { title: 'Documentation', url: 'docs/', description: 'Complete documentation for Oreon Linux' },
+            { title: 'Oreon Lime R2', url: 'oreon-lime-r2/', description: 'Stable Oreon release based on AlmaLinux 9' },
+            { title: 'Support Timeline', url: 'oreon-10-support-timeline/', description: 'Support timeline for Oreon releases' },
+            { title: 'Privacy Policy', url: 'privacy-policy.html', description: 'Oreon Project privacy policy' },
+            { title: 'Terms of Service', url: 'terms-of-service.html', description: 'Oreon Project terms of service' }
+        ];
+
+        function performSearch(query) {
+            if (!query.trim()) return [];
+            
+            const lowerQuery = query.toLowerCase();
+            return searchData.filter(item => 
+                item.title.toLowerCase().includes(lowerQuery) ||
+                item.description.toLowerCase().includes(lowerQuery)
+            );
+        }
+
+        function displaySearchResults(results, containerId = 'searchResults') {
+            const resultsContainer = document.getElementById(containerId);
+            
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="p-4 text-white/60 text-center">No results found</div>';
+                resultsContainer.classList.remove('hidden');
+                return;
+            }
+
+            resultsContainer.innerHTML = results.map(result => `
+                <a href="${result.url}" class="block p-4 hover:bg-white/10 transition-colors duration-200 border-b border-white/10 last:border-b-0">
+                    <div class="font-semibold text-white">${result.title}</div>
+                    <div class="text-sm text-white/60 mt-1">${result.description}</div>
+                </a>
+            `).join('');
+            
+            resultsContainer.classList.remove('hidden');
+        }
+
+        function displayMobileSearchResults(results) {
+            const resultsContainer = document.getElementById('mobileSearchResults');
+            
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="p-4 text-white/60 text-center">No results found</div>';
+                return;
+            }
+
+            resultsContainer.innerHTML = results.map(result => `
+                <a href="${result.url}" class="block p-3 hover:bg-white/10 transition-colors duration-200 border-b border-white/10 last:border-b-0">
+                    <div class="font-semibold text-white">${result.title}</div>
+                    <div class="text-sm text-white/60 mt-1">${result.description}</div>
+                </a>
+            `).join('');
+        }
+
         // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const dropdown = document.querySelector('.dropdown');
@@ -254,6 +823,105 @@
                 const menu = document.querySelector('.dropdown-content');
                 menu.classList.toggle('hidden');
             });
+
+            // Initialize language
+            changeLanguage(currentLanguage);
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const searchResults = document.getElementById('searchResults');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = this.value;
+                    const results = performSearch(query);
+                    displaySearchResults(results);
+                });
+
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const query = this.value;
+                        const results = performSearch(query);
+                        if (results.length > 0) {
+                            window.location.href = results[0].url;
+                        }
+                    }
+                });
+            }
+
+            if (searchBtn) {
+                searchBtn.addEventListener('click', function() {
+                    const query = searchInput.value;
+                    const results = performSearch(query);
+                    if (results.length > 0) {
+                        window.location.href = results[0].url;
+                    }
+                });
+            }
+
+            // Hide search results when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.search-container')) {
+                    searchResults.classList.add('hidden');
+                }
+            });
+
+            // Mobile search functionality
+            const mobileSearchToggle = document.getElementById('mobileSearchToggle');
+            const mobileSearchModal = document.getElementById('mobileSearchModal');
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+            const closeMobileSearch = document.getElementById('closeMobileSearch');
+
+            if (mobileSearchToggle) {
+                mobileSearchToggle.addEventListener('click', function() {
+                    mobileSearchModal.classList.remove('hidden');
+                    mobileSearchInput.focus();
+                });
+            }
+
+            if (closeMobileSearch) {
+                closeMobileSearch.addEventListener('click', function() {
+                    mobileSearchModal.classList.add('hidden');
+                });
+            }
+
+            if (mobileSearchModal) {
+                mobileSearchModal.addEventListener('click', function(e) {
+                    if (e.target === mobileSearchModal) {
+                        mobileSearchModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            if (mobileSearchInput) {
+                mobileSearchInput.addEventListener('input', function() {
+                    const query = this.value;
+                    const results = performSearch(query);
+                    displayMobileSearchResults(results);
+                });
+
+                mobileSearchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const query = this.value;
+                        const results = performSearch(query);
+                        if (results.length > 0) {
+                            window.location.href = results[0].url;
+                        }
+                    }
+                });
+            }
+
+            if (mobileSearchBtn) {
+                mobileSearchBtn.addEventListener('click', function() {
+                    const query = mobileSearchInput.value;
+                    const results = performSearch(query);
+                    if (results.length > 0) {
+                        window.location.href = results[0].url;
+                    }
+                });
+            }
         });
     </script>
 </body>

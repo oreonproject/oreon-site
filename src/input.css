@@ -56,7 +56,7 @@
 
   /* Dark navbar styling */
   .navbar-dark {
-    @apply bg-gray-900/95;
+    @apply bg-gray-900/95 backdrop-blur-md;
   }
   
   .navbar-dark .navbar-start a,
@@ -70,6 +70,42 @@
   .navbar-dark .navbar-center a:hover,
   .navbar-dark .menu a:hover {
     @apply bg-white/10 !important;
+  }
+
+  /* Modern search input styling */
+  .search-container input {
+    @apply bg-white/10 border-white/20 text-white placeholder-white/60;
+    backdrop-filter: blur(10px);
+  }
+
+  .search-container input:focus {
+    @apply bg-white/20 border-white/40 shadow-lg;
+  }
+
+  /* Modern dropdown styling */
+  .dropdown-content {
+    backdrop-filter: blur(10px);
+    @apply bg-gray-800/95 border border-white/10;
+  }
+
+  /* Enhanced button styling */
+  .btn-primary {
+    @apply bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-white/90 hover:bg-white text-emerald-700 font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200;
+  }
+
+  /* Modern card styling */
+  .card {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Enhanced glass effect */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-xl;
+    backdrop-filter: blur(10px);
   }
 }
 

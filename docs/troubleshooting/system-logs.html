@@ -13,7 +13,8 @@
 </head>
 <body class="min-h-screen bg-gradient-to-br from-aurora-50 via-white to-aurora-100">
     <!-- Navigation -->
-    <nav class="navbar navbar-dark backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <!-- Navigation -->
+    <nav class="navbar navbar-dark backdrop-blur-md shadow-xl sticky top-0 z-50 bg-gray-900/95 border-b border-white/10">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white hover:bg-white/10">
@@ -21,11 +22,11 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
-                    <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
-                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
-                    <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
-                    <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-800 rounded-box w-52 border border-white/10">
+                    <li><a href="../../help/" class="text-white hover:bg-white/10" data-translate="nav.help">Help & Support</a></li>
+                    <li><a href="../../oreon-10/" class="text-white hover:bg-white/10" data-translate="nav.oreon10">Oreon 10</a></li>
+                    <li><a href="../../our-team/" class="text-white hover:bg-white/10" data-translate="nav.team">Our Team</a></li>
+                    <li><a href="../../downloads/" class="text-white hover:bg-white/10" data-translate="nav.download">Download</a></li>
                 </ul>
             </div>
             <a href="../../" class="btn btn-ghost text-xl hover:bg-white/10">
@@ -34,16 +35,81 @@
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a href="../../help/" class="text-white hover:bg-white/10">Help & Support</a></li>
-                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10">Oreon 10</a></li>
-                <li><a href="../../our-team/" class="text-white hover:bg-white/10">Our Team</a></li>
-                <li><a href="../../downloads/" class="text-white hover:bg-white/10">Download</a></li>
+                <li><a href="../../help/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.help">Help & Support</a></li>
+                <li><a href="../../oreon-10/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.oreon10">Oreon 10</a></li>
+                <li><a href="../../our-team/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.team">Our Team</a></li>
+                <li><a href="../../downloads/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.download">Download</a></li>
             </ul>
         </div>
-        <div class="navbar-end">
-            <a href="https://forums.oreonproject.org" class="btn bg-white/10 text-white hover:bg-white/20 border-white/20">
+        <div class="navbar-end flex items-center gap-2">
+            <!-- Mobile Search Toggle -->
+            <button id="mobileSearchToggle" class="btn btn-ghost text-white hover:bg-white/10 md:hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </button>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center gap-2">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                           class="input input-bordered h-10 bg-white/10 border-white/20 text-white placeholder-white/60 w-52 pl-4 pr-4 focus:bg-white/20 focus:border-white/40 focus:ring-0 transition-all duration-200">
+                    <div id="searchResults" class="absolute top-full left-0 right-0 mt-2 bg-gray-800 border border-white/10 rounded-lg shadow-xl hidden max-h-96 overflow-y-auto z-50 w-64">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+                <button id="searchBtn" class="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Search Modal -->
+            <div id="mobileSearchModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden md:hidden">
+                <div class="flex items-start justify-center pt-20 px-4">
+                    <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-md border border-white/10">
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-4">
+                                <input type="text" id="mobileSearchInput" placeholder="Search..." 
+                                       class="input input-bordered bg-white/10 border-white/20 text-white placeholder-white/60 flex-1 focus:bg-white/20 focus:border-white/40">
+                                <button id="mobileSearchBtn" class="btn btn-primary">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </button>
+                                <button id="closeMobileSearch" class="btn btn-ghost text-white">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div id="mobileSearchResults" class="max-h-64 overflow-y-auto">
+                                <!-- Mobile search results will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost text-white hover:bg-white/10 border border-white/20">
+                    <i class="fas fa-globe mr-2"></i>
+                    <span id="currentLang">EN</span>
+                    <i class="fas fa-chevron-down ml-1"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-gray-800 rounded-box w-32 border border-white/10 z-50">
+                    <li><a href="#" onclick="changeLanguage('en')" class="text-white hover:bg-white/10">🇺🇸 English</a></li>
+                    <li><a href="#" onclick="changeLanguage('es')" class="text-white hover:bg-white/10">🇪🇸 Español</a></li>
+                    <li><a href="#" onclick="changeLanguage('fr')" class="text-white hover:bg-white/10">🇫🇷 Français</a></li>
+                    <li><a href="#" onclick="changeLanguage('de')" class="text-white hover:bg-white/10">🇩🇪 Deutsch</a></li>
+                    <li><a href="#" onclick="changeLanguage('it')" class="text-white hover:bg-white/10">🇮🇹 Italiano</a></li>
+                    <li><a href="#" onclick="changeLanguage('pt')" class="text-white hover:bg-white/10">🇵🇹 Português</a></li>
+                </ul>
+            </div>
+
+            <a href="https://forums.oreonproject.org" class="btn bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white border-0 shadow-lg">
                 <i class="fas fa-comments mr-2"></i>
-                Oreon Forums
+                <span data-translate="nav.forums">Forums</span>
             </a>
         </div>
     </nav>
@@ -508,6 +574,239 @@ sudo find /var/log -name "*.old" -delete</code></pre>
                 const menu = document.querySelector('.dropdown-content');
                 menu.classList.toggle('hidden');
             });
+        });
+    </script>
+
+    <script>
+        // Translation system
+        const translations = {
+            en: {
+                'nav.help': 'Help & Support',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Our Team',
+                'nav.download': 'Download',
+                'nav.forums': 'Forums'
+            },
+            es: {
+                'nav.help': 'Ayuda y Soporte',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Nuestro Equipo',
+                'nav.download': 'Descargar',
+                'nav.forums': 'Foros'
+            },
+            fr: {
+                'nav.help': 'Aide et Support',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Notre Équipe',
+                'nav.download': 'Télécharger',
+                'nav.forums': 'Forums'
+            },
+            de: {
+                'nav.help': 'Hilfe & Support',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Unser Team',
+                'nav.download': 'Herunterladen',
+                'nav.forums': 'Foren'
+            },
+            it: {
+                'nav.help': 'Aiuto e Supporto',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Il Nostro Team',
+                'nav.download': 'Scarica',
+                'nav.forums': 'Forum'
+            },
+            pt: {
+                'nav.help': 'Ajuda e Suporte',
+                'nav.oreon10': 'Oreon 10',
+                'nav.team': 'Nossa Equipe',
+                'nav.download': 'Baixar',
+                'nav.forums': 'Fóruns'
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            document.getElementById('currentLang').textContent = lang.toUpperCase();
+            
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Search functionality
+        const searchData = [
+            { title: 'Help & Support', url: '../../help/', description: 'Get help and support for Oreon Linux' },
+            { title: 'Oreon 10', url: '../../oreon-10/', description: 'Latest Oreon release based on AlmaLinux 10' },
+            { title: 'Our Team', url: '../../our-team/', description: 'Meet the Oreon Project team members' },
+            { title: 'Download', url: '../../downloads/', description: 'Download Oreon Linux distributions' },
+            { title: 'Documentation', url: '../../docs/', description: 'Complete documentation for Oreon Linux' },
+            { title: 'Oreon Lime R2', url: '../../oreon-lime-r2/', description: 'Stable Oreon release based on AlmaLinux 9' },
+            { title: 'Support Timeline', url: '../../oreon-10-support-timeline/', description: 'Support timeline for Oreon releases' },
+            { title: 'Privacy Policy', url: '../../privacy-policy.html', description: 'Oreon Project privacy policy' },
+            { title: 'Terms of Service', url: '../../terms-of-service.html', description: 'Oreon Project terms of service' }
+        ];
+
+        function performSearch(query) {
+            if (!query.trim()) return [];
+            
+            const lowerQuery = query.toLowerCase();
+            return searchData.filter(item => 
+                item.title.toLowerCase().includes(lowerQuery) ||
+                item.description.toLowerCase().includes(lowerQuery)
+            );
+        }
+
+        function displaySearchResults(results, containerId = 'searchResults') {
+            const resultsContainer = document.getElementById(containerId);
+            
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="p-4 text-white/60 text-center">No results found</div>';
+                resultsContainer.classList.remove('hidden');
+                return;
+            }
+
+            resultsContainer.innerHTML = results.map(result => `
+                <a href="${result.url}" class="block p-4 hover:bg-white/10 transition-colors duration-200 border-b border-white/10 last:border-b-0">
+                    <div class="font-semibold text-white">${result.title}</div>
+                    <div class="text-sm text-white/60 mt-1">${result.description}</div>
+                </a>
+            `).join('');
+            
+            resultsContainer.classList.remove('hidden');
+        }
+
+        function displayMobileSearchResults(results) {
+            const resultsContainer = document.getElementById('mobileSearchResults');
+            
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="p-4 text-white/60 text-center">No results found</div>';
+                return;
+            }
+
+            resultsContainer.innerHTML = results.map(result => `
+                <a href="${result.url}" class="block p-3 hover:bg-white/10 transition-colors duration-200 border-b border-white/10 last:border-b-0">
+                    <div class="font-semibold text-white">${result.title}</div>
+                    <div class="text-sm text-white/60 mt-1">${result.description}</div>
+                </a>
+            `).join('');
+        }
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menuButton = document.querySelector('.btn-ghost');
+
+            menuButton?.addEventListener('click', function() {
+                const menu = document.querySelector('.dropdown-content');
+                menu?.classList.toggle('hidden');
+            });
+
+            // Initialize language
+            changeLanguage(currentLanguage);
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const searchResults = document.getElementById('searchResults');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = this.value;
+                    const results = performSearch(query);
+                    displaySearchResults(results);
+                });
+
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const query = this.value;
+                        const results = performSearch(query);
+                        if (results.length > 0) {
+                            window.location.href = results[0].url;
+                        }
+                    }
+                });
+            }
+
+            if (searchBtn) {
+                searchBtn.addEventListener('click', function() {
+                    const query = searchInput.value;
+                    const results = performSearch(query);
+                    if (results.length > 0) {
+                        window.location.href = results[0].url;
+                    }
+                });
+            }
+
+            // Hide search results when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.search-container') && searchResults) {
+                    searchResults.classList.add('hidden');
+                }
+            });
+
+            // Mobile search functionality
+            const mobileSearchToggle = document.getElementById('mobileSearchToggle');
+            const mobileSearchModal = document.getElementById('mobileSearchModal');
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+            const closeMobileSearch = document.getElementById('closeMobileSearch');
+
+            if (mobileSearchToggle) {
+                mobileSearchToggle.addEventListener('click', function() {
+                    mobileSearchModal.classList.remove('hidden');
+                    mobileSearchInput.focus();
+                });
+            }
+
+            if (closeMobileSearch) {
+                closeMobileSearch.addEventListener('click', function() {
+                    mobileSearchModal.classList.add('hidden');
+                });
+            }
+
+            if (mobileSearchModal) {
+                mobileSearchModal.addEventListener('click', function(e) {
+                    if (e.target === mobileSearchModal) {
+                        mobileSearchModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            if (mobileSearchInput) {
+                mobileSearchInput.addEventListener('input', function() {
+                    const query = this.value;
+                    const results = performSearch(query);
+                    displayMobileSearchResults(results);
+                });
+
+                mobileSearchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const query = this.value;
+                        const results = performSearch(query);
+                        if (results.length > 0) {
+                            window.location.href = results[0].url;
+                        }
+                    }
+                });
+            }
+
+            if (mobileSearchBtn) {
+                mobileSearchBtn.addEventListener('click', function() {
+                    const query = mobileSearchInput.value;
+                    const results = performSearch(query);
+                    if (results.length > 0) {
+                        window.location.href = results[0].url;
+                    }
+                });
+            }
         });
     </script>
 </body>
