@@ -27,7 +27,6 @@
                     <li><a href="../oreon-10/" class="text-white hover:bg-white/10" data-translate="nav.oreon10">Oreon 10</a></li>
                     <li><a href="../our-team/" class="text-white hover:bg-white/10" data-translate="nav.team">Our Team</a></li>
                     <li><a href="../downloads/" class="text-white hover:bg-white/10" data-translate="nav.download">Download</a></li>
-                    <li><a href="../flick/" class="text-white hover:bg-white/10" data-translate="nav.flick">Flick</a></li>
                 </ul>
             </div>
             <a href="../" class="btn btn-ghost text-xl hover:bg-white/10">
@@ -40,7 +39,6 @@
                 <li><a href="../oreon-10/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.oreon10">Oreon 10</a></li>
                 <li><a href="../our-team/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.team">Our Team</a></li>
                 <li><a href="../downloads/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.download">Download</a></li>
-                <li><a href="../flick/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.flick">Flick</a></li>
             </ul>
         </div>
         <div class="navbar-end flex items-center gap-2">
@@ -121,14 +119,19 @@
         <div class="hero-content text-center">
             <div class="max-w-4xl">
                 <h1 class="text-5xl md:text-6xl font-black mb-8">
-                    <span class="gradient-text">Documentation (legacy)</span>
+                    <span class="gradient-text">Legacy Documentation Archive</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-base-content/70 mb-8">
-                    Comprehensive guides to help you get the most out of Oreon Linux
+                <p class="text-xl md:text-2xl text-base-content/70 mb-4">
+                    Archived documentation for older Oreon releases.
                 </p>
-                <p class="text-lg text-base-content/60 max-w-3xl mx-auto">
-                    Whether you're a new user or an experienced system administrator, our documentation will help you understand how to install, configure, use, and troubleshoot Oreon Linux effectively.
+                <p class="text-lg text-base-content/60 max-w-3xl mx-auto mb-4">
+                    This site is kept as a reference for previous versions of Oreon. For the most accurate and
+                    up-to-date information, including work toward Oreon 11, please use our wiki.
                 </p>
+                <a href="https://wiki.oreonproject.org" class="inline-flex items-center mt-2 px-6 py-3 rounded-xl bg-oreon-600 text-white font-semibold shadow-md hover:bg-oreon-700 transition-colors duration-200">
+                    <i class="fas fa-book-open mr-2"></i>
+                    Open current documentation on the wiki
+                </a>
             </div>
         </div>
     </section>
@@ -362,10 +365,11 @@
         <nav>
             <h6 class="footer-title">Resources</h6>
             <a href="../downloads/" class="link link-hover">Download</a>
-            <a href="../docs/" class="link link-hover">Documentation</a>
+            <a href="https://wiki.oreonproject.org" class="link link-hover">Current Documentation (wiki)</a>
+            <a href="../docs/" class="link link-hover">Legacy Documentation Archive</a>
             <a href="../oreon-10/" class="link link-hover">Oreon 10</a>
             <a href="../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
-            <a href="../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+            <a href="https://wiki.oreonproject.org/docs/Support-Timelines/oreon-10-support-timeline" class="link link-hover">Support Timeline</a>
         </nav>
         <nav>
             <h6 class="footer-title">Community</h6>
@@ -406,7 +410,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Our Team',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Forums'
             },
             es: {
@@ -414,7 +417,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Nuestro Equipo',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Foros'
             },
             fr: {
@@ -422,7 +424,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Notre Équipe',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Forums'
             },
             de: {
@@ -430,7 +431,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Unser Team',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Foren'
             },
             it: {
@@ -438,7 +438,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Il Nostro Team',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Forum'
             },
             pt: {
@@ -446,7 +445,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Nossa Equipe',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Fóruns'
             }
         };
@@ -474,10 +472,10 @@
             { title: 'Oreon 10', url: '../oreon-10/', description: 'Latest Oreon release based on AlmaLinux 10' },
             { title: 'Our Team', url: '../our-team/', description: 'Meet the Oreon Project team members' },
             { title: 'Download', url: '../downloads/', description: 'Download Oreon Linux distributions' },
-            { title: 'Flick', url: '../flick/', description: 'Video sharing platform by Oreon Project' },
-            { title: 'Documentation', url: '../docs/', description: 'Complete documentation for Oreon Linux' },
+            { title: 'Current Documentation (wiki)', url: 'https://wiki.oreonproject.org', description: 'Up-to-date documentation for Oreon' },
+            { title: 'Legacy Documentation Archive', url: '../docs/', description: 'Older, archived documentation for previous releases' },
             { title: 'Oreon Lime R2', url: '../oreon-lime-r2/', description: 'Stable Oreon release based on AlmaLinux 9' },
-            { title: 'Support Timeline', url: '../oreon-10-support-timeline/', description: 'Support timeline for Oreon releases' },
+            { title: 'Support Timeline', url: 'https://wiki.oreonproject.org/docs/Support-Timelines/oreon-10-support-timeline', description: 'Support timeline for Oreon releases' },
             { title: 'Privacy Policy', url: '../privacy-policy.html', description: 'Oreon Project privacy policy' },
             { title: 'Terms of Service', url: '../terms-of-service.html', description: 'Oreon Project terms of service' }
         ];

@@ -26,7 +26,6 @@
                     <li><a href="../oreon-10/" class="text-white hover:bg-white/10" data-translate="nav.oreon10">Oreon 10</a></li>
                     <li><a href="../our-team/" class="text-white hover:bg-white/10" data-translate="nav.team">Our Team</a></li>
                     <li><a href="../downloads/" class="text-white hover:bg-white/10" data-translate="nav.download">Download</a></li>
-                    <li><a href="../flick/" class="text-white hover:bg-white/10" data-translate="nav.flick">Flick</a></li>
                 </ul>
             </div>
             <a href="../" class="btn btn-ghost text-xl hover:bg-white/10">
@@ -39,7 +38,6 @@
                 <li><a href="../oreon-10/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.oreon10">Oreon 10</a></li>
                 <li><a href="../our-team/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.team">Our Team</a></li>
                 <li><a href="../downloads/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.download">Download</a></li>
-                <li><a href="../flick/" class="text-white hover:bg-white/10 transition-colors duration-200" data-translate="nav.flick">Flick</a></li>
             </ul>
         </div>
         <div class="navbar-end flex items-center gap-2">
@@ -129,6 +127,47 @@
         </div>
     </section>
 
+    <!-- Quick Download Checklist -->
+    <section class="py-6 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="rounded-3xl bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-sky-500/10 border border-emerald-200/60 shadow-lg px-6 py-5 md:px-8 md:py-6">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-700">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-semibold text-lg md:text-xl text-gray-900">
+                                Not sure where to start?
+                            </h2>
+                            <p class="text-sm md:text-base text-gray-700">
+                                Follow this quick checklist to get a smooth Oreon install on your machine.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:flex md:flex-row gap-2 text-xs md:text-sm text-gray-800">
+                        <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/70 border border-emerald-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span>
+                            Check architecture (x86_64 / aarch64)
+                        </div>
+                        <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/70 border border-emerald-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span>
+                            Pick version (10 or Lime R2)
+                        </div>
+                        <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/70 border border-emerald-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span>
+                            Verify checksum
+                        </div>
+                        <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/70 border border-emerald-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span>
+                            Flash USB & boot
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Downloads Section -->
     <section class="py-10 px-4">
         <div class="container mx-auto max-w-7xl">
@@ -174,7 +213,7 @@
                             <i class="fas fa-box mr-2"></i>
                             Flatpak Repository
                         </a>
-                        <a href="../oreon-10-support-timeline/" class="btn btn-secondary">
+                        <a href="https://wiki.oreonproject.org/docs/Support-Timelines/oreon-10-support-timeline" class="btn btn-secondary">
                             <i class="fas fa-calendar mr-2"></i>
                             Support Timeline
                         </a>
@@ -216,7 +255,7 @@
                             <i class="fas fa-box mr-2"></i>
                             Flatpak Repository
                         </a>
-                        <a href="../oreon-lime-r2-support-timeline/" class="btn btn-secondary">
+                        <a href="https://wiki.oreonproject.org/docs/Support-Timelines/oreon-lime-r2-support-timeline" class="btn btn-secondary">
                             <i class="fas fa-calendar mr-2"></i>
                             Support Timeline
                         </a>
@@ -262,6 +301,52 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Which Version Should I Choose? -->
+            <div class="mt-10">
+                <h3 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-question-circle text-aurora-500 mr-2"></i>
+                    Which version is right for me?
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card glass-card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="card-body">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-xl font-semibold text-aurora-700">
+                                    Oreon 10 'Foxy'
+                                </h4>
+                                <span class="badge badge-primary badge-lg">Latest</span>
+                            </div>
+                            <p class="text-base-content/80 mb-3">
+                                Choose Oreon 10 if you want the newest desktop experience and the longest support window.
+                            </p>
+                            <ul class="text-sm text-base-content/80 space-y-1.5">
+                                <li><i class="fas fa-check text-emerald-500 mr-2"></i>New hardware and latest GNOME features</li>
+                                <li><i class="fas fa-check text-emerald-500 mr-2"></i>Best choice for new installs on modern PCs and laptops</li>
+                                <li><i class="fas fa-check text-emerald-500 mr-2"></i>Prefer if you like cutting‑edge user experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card glass-card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="card-body">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-xl font-semibold text-aurora-700">
+                                    Oreon Lime (R2) 'Limefalls'
+                                </h4>
+                                <span class="badge badge-ghost badge-lg">Stable</span>
+                            </div>
+                            <p class="text-base-content/80 mb-3">
+                                Choose Oreon Lime R2 if you prefer a slightly older base with a long, proven track record.
+                            </p>
+                            <ul class="text-sm text-base-content/80 space-y-1.5">
+                                <li><i class="fas fa-check text-emerald-500 mr-2"></i>Great for systems that must change slowly</li>
+                                <li><i class="fas fa-check text-emerald-500 mr-2"></i>Ideal for workstations and home‑lab scenarios</li>
+                                <li><i class="fas fa-check text-emerald-500 mr-2"></i>Aligns with the AlmaLinux 9 lifecycle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -274,10 +359,11 @@
         <nav>
             <h6 class="footer-title">Resources</h6>
             <a href="../downloads/" class="link link-hover">Download</a>
-            <a href="../docs/" class="link link-hover">Documentation</a>
+            <a href="https://wiki.oreonproject.org" class="link link-hover">Current Documentation (wiki)</a>
+            <a href="../docs/" class="link link-hover">Legacy Documentation Archive</a>
             <a href="../oreon-10/" class="link link-hover">Oreon 10</a>
             <a href="../oreon-lime-r2/" class="link link-hover">Oreon Lime R2</a>
-            <a href="../oreon-10-support-timeline/" class="link link-hover">Support Timeline</a>
+            <a href="https://wiki.oreonproject.org/docs/Support-Timelines/oreon-10-support-timeline" class="link link-hover">Support Timeline</a>
         </nav>
         <nav>
             <h6 class="footer-title">Community</h6>
@@ -377,7 +463,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Our Team',
                 'nav.download': 'Download',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Forums'
             },
             es: {
@@ -385,7 +470,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Nuestro Equipo',
                 'nav.download': 'Descargar',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Foros'
             },
             fr: {
@@ -393,7 +477,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Notre Équipe',
                 'nav.download': 'Télécharger',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Forums'
             },
             de: {
@@ -401,7 +484,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Unser Team',
                 'nav.download': 'Herunterladen',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Foren'
             },
             it: {
@@ -409,7 +491,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Il Nostro Team',
                 'nav.download': 'Scarica',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Forum'
             },
             pt: {
@@ -417,7 +498,6 @@
                 'nav.oreon10': 'Oreon 10',
                 'nav.team': 'Nossa Equipe',
                 'nav.download': 'Baixar',
-                'nav.flick': 'Flick',
                 'nav.forums': 'Fóruns'
             }
         };
@@ -445,10 +525,10 @@
             { title: 'Oreon 10', url: '../oreon-10/', description: 'Latest Oreon release based on AlmaLinux 10' },
             { title: 'Our Team', url: '../our-team/', description: 'Meet the Oreon Project team members' },
             { title: 'Download', url: '../downloads/', description: 'Download Oreon Linux distributions' },
-            { title: 'Flick', url: '../flick/', description: 'Video sharing platform by Oreon Project' },
-            { title: 'Documentation', url: '../docs/', description: 'Complete documentation for Oreon Linux' },
+            { title: 'Current Documentation (wiki)', url: 'https://wiki.oreonproject.org', description: 'Up-to-date documentation for Oreon' },
+            { title: 'Legacy Documentation Archive', url: '../docs/', description: 'Older, archived documentation for previous releases' },
             { title: 'Oreon Lime R2', url: '../oreon-lime-r2/', description: 'Stable Oreon release based on AlmaLinux 9' },
-            { title: 'Support Timeline', url: '../oreon-10-support-timeline/', description: 'Support timeline for Oreon releases' },
+            { title: 'Support Timeline', url: 'https://wiki.oreonproject.org/docs/Support-Timelines/oreon-10-support-timeline', description: 'Support timeline for Oreon releases' },
             { title: 'Privacy Policy', url: '../privacy-policy.html', description: 'Oreon Project privacy policy' },
             { title: 'Terms of Service', url: '../terms-of-service.html', description: 'Oreon Project terms of service' }
         ];
