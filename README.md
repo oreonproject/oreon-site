@@ -1,4 +1,4 @@
-# Oreon Project Website
+# Oreon Open Technology Consortium Website
 
 ## Getting Started
 

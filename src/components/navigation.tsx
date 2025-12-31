@@ -30,7 +30,7 @@ export function Navigation() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/oreonlogo.png"
-                alt="Oreon Project Logo"
+                alt="Oreon Open Technology Consortium Logo"
                 width={100}
                 height={33}
                 className="h-8 w-auto"

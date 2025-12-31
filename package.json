@@ -1,7 +1,7 @@
 {
   "name": "oreon-modern-site",
   "version": "1.0.0",
-  "description": "Modern website for Oreon Project using Tailwind CSS + DaisyUI",
+  "description": "Modern website for Oreon Open Technology Consortium using Tailwind CSS + DaisyUI",
   "main": "index.html",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",

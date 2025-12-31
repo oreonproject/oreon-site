@@ -10,8 +10,6 @@ module.exports = {
     "./oreon-lime-r2/**/*.html", 
     "./oreon-10-support-timeline/**/*.html", 
     "./oreon-lime-r2-support-timeline/**/*.html", 
-    "./privacy-policy.html", 
-    "./terms-of-service.html",
     "./404.html"
   ],
   theme: {
